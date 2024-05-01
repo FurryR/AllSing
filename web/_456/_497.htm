@@ -1,0 +1,730 @@
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<html>
+<head>
+    <script src="/languages.js"></script>
+    <script src="/_199.js"></script>
+    <script src="/_18.js"></script>
+    <script src="/_19.js"></script>
+    <script src="/_226.js"></script>
+    <script src="/_373/_375.js"></script>
+    <script src="/_206.js"></script>
+    <script src="/_196.js"></script>
+    <script src="/_431.js"></script>
+    <script src="/_510.js"></script>
+    <script src="_459.js"></script>
+    <script src="_472.js"></script>
+    <script src="_469.js"></script>
+    <script src="_476.js"></script>
+    <script src="_465.js"></script>
+    <script src="_477.js"></script>
+    <script src="_494.js"></script>
+    <script src="_475.js"></script>
+    <script src="_495.js"></script>
+    <script src="_496.js"></script>
+    <script>
+        var _7461 = new Array();
+        function _1792()
+        {
+            return _7461;
+        }
+        function _1791(_1232)
+        {
+            for (let _754 = 0; _754 < _7461.length; _754++)
+            {
+                let _456 = _7461[_754];
+                if (_456._1891 == _1232)
+                    return _456;
+            }
+            return null;
+        }
+        function _590()
+        {
+            let _3150 = new _1209();
+            _3150._1235(true);
+            for (let _754 = 0; _754 < _7461.length; _754++)
+            {
+                let _456 = _7461[_754];
+                _3150._1247(_1892._1893(_456));
+            }
+            return _3150._1260();
+        }
+        function _587(_893)
+        {
+            if (parent._3151)
+            {
+                let _6271;
+                _6271 = _893;
+                if (_6271._803() == 0 || _6271 == null)
+                {
+                    _1162();
+                }
+                else
+                {
+                    let _7164;
+                    _7164 = _6271;
+                    let _7160 = new _804();
+                    _7160._807(_7164, "read_from_file");
+                    if (_6271 = _7160._813(F("长度")))
+                    {
+                        _7461.length = _6271._789();
+                        for (let _754 = 0; _754 < _7461.length; _754++)
+                        {
+                            let _7291;
+                            if (_7291 = _7160._813(F("音色") + _754))
+                                _7461[_754] = _1892._7151(_7291);
+                        }
+                    }
+                    _6271 = _7164;
+                }
+                _7462();
+            }
+            else
+            {
+                if (_893.length == 0 || _893 == null)
+                {
+                    _1162();
+                }
+                else
+                {
+                    let _1580 = new _1261();
+                    _1580._1264(_893);
+                    _7461.length = _1580._1266();
+                    for (let _754 = 0; _754 < _7461.length; _754++)
+                    {
+                        let _623;
+                        if ((_623 = _1580._1247(_754)) !== undefined)
+                            _7461[_754] = _1892._7151(_623);
+                    }
+                }
+                _7462();
+            }
+        }
+        let _7556 = 1;
+        function _1162()
+        {
+            _7461.length = _7556;
+            let _7557 =
+                F('{\r\n') +
+                F('	"签名": "大市唱音色1.0",\r\n') +
+                F('	"类型": "纯计算",\r\n') +
+                F('	"名称": "' + L('女生1') + '",\r\n') +
+                F('	"颜色": "blue",\r\n') +
+                F('	"身高": 150.099999999999994316,\r\n') +
+                F('	"身高自动": false,\r\n') +
+                F(' "滤波": {"控制点数组":[{"m开始x":0,"m峰的x":515.1678540612396,"m结束x":2722.98578199052,"m峰值":0.5636053534522544,"m左尖锐":0.1,"m右尖锐":0.1,"m增加":false}],"最小值x":0,"最大值x":8000,"最小值y":-1,"最大值y":1,"只能为正":false},\r\n') +
+                F('	"保留低倍频": true,\r\n') +
+                F('	"第一倍频振幅": 1.32000000000000006217,\r\n') +
+                F('	"第二倍频振幅": 1.32000000000000006217,\r\n') +
+                F('	"共振峰宽度": 3.0,\r\n') +
+                F('	"高阶共振峰频谱位置": -0.2,\r\n') +
+                F('	"音色":\r\n') +
+                F('	{\r\n') +
+                F('		"振幅变化": {"最小值":0,"最大值":1,"控制点数组":[{"m倍频":1,"m值":0}]},\r\n') +
+                F('		"振幅变化速度": {"最小值":0,"最大值":10,"控制点数组":[{"m倍频":1,"m值":0.2}]},\r\n') +
+                F('		"振幅变化随机分布": {"控制点数组":[{"m倍频":1,"m值":0.5}],"最小值":-1,"最大值":1},\r\n') +
+                F('		"频率变化": {"控制点数组":[{"m倍频":1,"m最大值":0.01,"m最小值":-0.01}],"最小值":-0.15,"最大值":0.15,"上下对称":true},\r\n') +
+                F('		"频率变化速度": {"最小值":0,"最大值":10,"控制点数组":[{"m倍频":1,"m值":0.2}]},\r\n') +
+                F('		"频率变化随机分布": {"控制点数组":[{"m倍频":1,"m值":0.5}],"最小值":-1,"最大值":1}\r\n') +
+                F('	}\r\n') +
+                F('}');
+            _7461[0] = _1892._7151(_7557);
+            _7462();
+        }
+        let _7520 = null;
+        function _1205(_7158)
+        {
+            _7520 = new _7154();
+            _7520._1891 = parent._1875()._624(F("赵磊"));
+            let _6271 = new _634();
+            _6271._785(_7158);
+            _7520._7158._7151(_6271);
+            
+        }
+    </script>
+</head>
+<body onload="TranslateAll();" onkeyup="if (event.key == 'Escape') {  _2.dispatchEvent( new _5317('click', {'view': window, 'bubbles': true, 'cancelable': true}));}">
+    <iframe id="_498" src="_477.htm" style="position: fixed; border: none; width: 100%; height: 1px; left: 0px; top: -1px; z-index: 10000000; "></iframe>
+    <script>
+        function _7558()
+        {
+            document.body.style.overflow = '';
+            _498.style.height = '1px';
+            _498.style.top = '-1px';
+            document.body.focus();
+            _7462();
+        }
+        function _7508()
+        {
+            document.body.style.overflow = 'hidden';
+            _498.style.height = '100%';
+            _498.style.top = '0px';
+            _498.focus();
+        }
+        _7517 = null;
+        function _7305()
+        {
+            if (_7517)
+            {
+                _7517();
+                _7517 = null;
+            }
+            _7558();
+        }
+    </script>
+
+
+    <iframe id="_499" src="_459.htm" style="position: fixed; border: none; width: 100%; height: 1px; left: 0px; top: -1px; z-index: 10000001; "></iframe>
+    <script>
+        function _7559()
+        {
+            document.body.style.overflow = '';
+            _499.style.height = '1px';
+            _499.style.top = '-1px';
+            _7462();
+            _499.blur();
+            document.body.focus();
+        }
+        function _7549()
+        {
+            document.body.style.overflow = 'hidden';
+            _499.style.height = '100%';
+            _499.style.top = '0px';
+            _499.focus();
+        }
+        function _7021()
+        {
+            _7559();
+        }
+    </script>
+
+
+    <iframe id="_500" src="_472.htm" style="position: fixed; border: none; width: 100%; height: 1px; left: 0px; top: -1px; z-index: 10000001; "></iframe>
+    <script>
+        function _7560()
+        {
+            document.body.style.overflow = '';
+            _500.style.height = '1px';
+            _500.style.top = '-1px';
+            _7462();
+            _500.blur();
+            document.body.focus();
+        }
+        function _7553()
+        {
+            document.body.style.overflow = 'hidden';
+            _500.style.height = '100%';
+            _500.style.top = '0px';
+            _500.focus();
+        }
+        function _7231()
+        {
+            _7560();
+        }
+    </script>
+
+    <iframe id="_501" src="_469.htm" style="position: fixed; border: none; width: 100%; height: 1px; left: 0px; top: -1px; z-index: 10000003; "></iframe>
+    <script>
+        function _7180()
+        {
+            document.body.style.overflow = '';
+            _501.style.height = '1px';
+            _501.style.top = '-1px';
+            _7462();
+            _501.blur();
+            document.body.focus();
+        }
+        function _7541()
+        {
+            document.body.style.overflow = 'hidden';
+            _501.style.height = '100%';
+            _501.style.top = '0px';
+            _501.focus();
+        }
+    </script>
+
+    <img src="_508.jpg" style="position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; z-index: -1;" />
+    <div style="text-align: right; width: 100%;">
+        <label id="_2" style="display: inline-block; cursor: pointer; text-align: center; position: fixed; top: 0px;" onclick="if(parent) parent._1894();">
+            <img src="/_301.png" title="L(返回到歌曲编辑器)" style="width:32px;height:32px;" /><br />
+            <span>L(返回)</span>
+        </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+    <div style="font-size: xx-large; text-align: center;  ">L(音色设置)</div>
+    <br />
+    <span id="_502"></span>
+    <input id="_503" type="button" value="L(新建纯计算音色)" onclick="_7518();" />
+    <input id="_504" type="button" value="L(新建声带振动提取)" onclick="_7515();" />
+    <input id="_505" type="button" value="L(新建赵磊音色)" onclick="_7519();" />
+    <input id="_408" type="button" value="L(粘贴音色)" onclick="_7510();" />
+    <input type="file" id="_506" multiple accept="application/*.dsc.timbre" onchange="_7521();" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(1px 1px 1px 1px);">
+    <input id="_507" type="button" value="L(上传音色)" onclick="_506.click();" />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+    <script>
+        TranslateAll();
+        function _7462()
+        {
+            function _7561(_456, _754)
+            {
+                let _824;
+                _824 = "";
+                function _7562()
+                {
+                    _824 += L("厚度方式：") + L(_456._7161) + L("，");
+                    if (_456._7161 == F("全频段厚度同一"))
+                    {
+                        _824 += "<span>" + L("厚度：") + "</span>";
+                        _824 += "<span>" + L("薄") + "</span>";
+                        _824 += "<span id='_7673" + _754 + "'></span>";
+                        _824 += "<span>" + L("厚") + "</span>";
+                        _824 += "&nbsp;";
+                        _824 += "<span id='_7674" + _754 + "'>" + _456._7162 + "</span>";
+                        _824 += L("，");
+                        _824 += "&nbsp;&nbsp;";
+                        _824 += "<img src='/_22.png' onclick='_7523(" + _754 + ");' style='width:16px;height:16px;cursor:pointer;' title='" + L("改为不同频段厚度不同") + "' />\r\n";
+                        _824 += "<span>" + L("不同频段厚度") + "</span > ";
+                        _824 += L("。");
+                        _824 += "<br/>\r\n";
+                    }
+                    else
+                    {
+                        _824 += _7228(_456._7163);
+                        _824 += L("；");
+                        _824 += "<img src='_457.png' onclick='_7546(" + _754 + ");' style='width:16px;height:16px;cursor:pointer;' title='" + L("编辑") + "' />\r\n";
+                        _824 += L("，");
+                        _824 += "&nbsp;&nbsp;";
+                        _824 += "<img src='/_22.png' onclick='_7522(" + _754 + ");' style='width:16px;height:16px;cursor:pointer;' title='" + L("改为全频段厚度同一") + "' />\r\n";
+                        _824 += "<span>" + L("全频段厚度同一") + "</span > ";
+                        _824 += L("。");
+                        _824 += "<br/>\r\n";
+                    }
+                }
+                switch (_456._7159)
+                {
+                    case F("厚度"):
+                        _824 += L("来源：") + _456._7158._7141 + "<br/>\r\n";
+                        _7562();
+                        break;
+                    case F("攫取"):
+                        _824 += L("来源：") + _456._7342 + "<br/>\r\n";
+                        _7562();
+                        _824 += "<span>" + L("整形（噪音较大的情况）：") + "</span>";
+                        _824 += "<span style='cursor:pointer;' title='" + L("点击修改") + "'  onclick='_7547(" + _754 + ")' >" + _7228(_456._7343) + "</span>";
+                        _824 += "<br/>\r\n";
+                        _824 += L("编辑：");
+                        _824 += "<img src='_457.png' onclick='_7507(" + _754 + ");' style='width:16px;height:16px;cursor:pointer;' title='" + L("编辑") + "' />\r\n";
+                        _824 += "<br/>\r\n";
+                        break;
+                    case F("纯计算"):
+                        _824 += L("振幅：");
+                        _824 += "<img src='/_25.png' title='" + L("复制振幅全部") + "' style='width:16px;height:16px;cursor:pointer;' onclick='_7293._7460(" + _754 + ");' />\r\n";
+                        _824 += "<img src='/_201.png' title='" + L("粘贴振幅全部") + "' style='width:16px;height:16px;cursor:pointer;" + ((_7293._7418 && _7293._7425 && _7293._7432) ? "" : "-webkit-filter:grayscale(100%);") + "' onclick='_7293._7463(" + _754 + ");' />\r\n";
+                        _824 += "<br/>\r\n";
+
+                        _824 += "&emsp;&emsp;";
+                        _824 += "<span style='cursor:pointer;' title='" + L("点击修改") + "'  onclick='_7548(" + _754 + ")' >\r\n";
+                        _824 += _7293._7423 + L("：") + _7126(_456._7419);
+                        _824 += "</span>\r\n";
+                        _824 += "<img src='/_25.png' title='" + L("复制振幅变化") + "' style='width:16px;height:16px;cursor:pointer;' onclick='_7293._7464(" + _754 + ");' />\r\n";
+                        _824 += "<img src='/_201.png' title='" + L("粘贴振幅变化") + "' style='width:16px;height:16px;cursor:pointer;" + (_7293._7418 ? "" : "-webkit-filter:grayscale(100%);") + "' onclick='_7293._7465(" + _754 + ");' />\r\n";
+                        _824 += "<br/>\r\n";
+
+                        _824 += "&emsp;&emsp;";
+                        _824 += "<span style='cursor:pointer;' title='" + L("点击修改") + "'  onclick='_7550(" + _754 + ")' >\r\n";
+                        _824 += _7293._7430 + L("：") + _7126(_456._7426);
+                        _824 += "</span>\r\n";
+                        _824 += "<img src='/_25.png' title='" + L("复制振幅变化速度") + "' style='width:16px;height:16px;cursor:pointer;' onclick='_7293._7466(" + _754 + ");' />\r\n";
+                        _824 += "<img src='/_201.png' title='" + L("粘贴振幅变化速度") + "' style='width:16px;height:16px;cursor:pointer;" + (_7293._7425 ? "" : "-webkit-filter:grayscale(100%);") + "' onclick='_7293._7467(" + _754 + ");' />\r\n";
+                        _824 += "<br/>\r\n";
+
+                        _824 += "&emsp;&emsp;";
+                        _824 += "<span style='cursor:pointer;' title='" + L("点击修改") + "'  onclick='_7551(" + _754 + ")' >\r\n";
+                        _824 += _7293._7437 + L("：") + _7126(_456._7433);
+                        _824 += "</span>\r\n";
+                        _824 += "<img src='/_25.png' title='" + L("复制振幅变化随机分布") + "' style='width:16px;height:16px;cursor:pointer;' onclick='_7293._7468(" + _754 + ");' />\r\n";
+                        _824 += "<img src='/_201.png' title='" + L("粘贴振幅变化随机分布") + "' style='width:16px;height:16px;cursor:pointer;" + (_7293._7432 ? "" : "-webkit-filter:grayscale(100%);") + "' onclick='_7293._7469(" + _754 + ");' />\r\n";
+                        _824 += "<br/>\r\n";
+
+
+                        _824 += L("频率：");
+                        _824 += "<img src='/_25.png' title='" + L("复制频率全部") + "' style='width:16px;height:16px;cursor:pointer;' onclick='_7293._7470(" + _754 + ");' />\r\n";
+                        _824 += "<img src='/_201.png' title='" + L("粘贴频率全部") + "' style='width:16px;height:16px;cursor:pointer;" + ((_7293._7439 && _7293._7446 && _7293._7453) ? "" : "-webkit-filter:grayscale(100%);") + "' onclick='_7293._7471(" + _754 + ");' />\r\n";
+                        _824 += "<br/>\r\n";
+
+                        _824 += "&emsp;&emsp;";
+                        _824 += "<span style='cursor:pointer;' title='" + L("点击修改") + "'  onclick='_7552(" + _754 + ")' >\r\n";
+                        _824 += _7293._7444 + L("：") + _7252(_456._7440);
+                        _824 += "</span>\r\n";
+                        _824 += "<img src='/_25.png' title='" + L("复制频率变化") + "' style='width:16px;height:16px;cursor:pointer;' onclick='_7293._7472(" + _754 + ");' />\r\n";
+                        _824 += "<img src='/_201.png' title='" + L("粘贴频率变化") + "' style='width:16px;height:16px;cursor:pointer;" + (_7293._7439 ? "" : "-webkit-filter:grayscale(100%);") + "' onclick='_7293._7473(" + _754 + ");' />\r\n";
+                        _824 += "<br/>\r\n";
+
+                        _824 += "&emsp;&emsp;";
+                        _824 += "<span style='cursor:pointer;' title='" + L("点击修改") + "'  onclick='_7554(" + _754 + ")' >\r\n";
+                        _824 += _7293._7451 + L("：") + _7126(_456._7447);
+                        _824 += "</span>\r\n";
+                        _824 += "<img src='/_25.png' title='" + L("复制频率变化速度") + "' style='width:16px;height:16px;cursor:pointer;' onclick='_7293._7474(" + _754 + ");' />\r\n";
+                        _824 += "<img src='/_201.png' title='" + L("粘贴频率变化速度") + "' style='width:16px;height:16px;cursor:pointer;" + (_7293._7446 ? "" : "-webkit-filter:grayscale(100%);") + "' onclick='_7293._7475(" + _754 + ");' />\r\n";
+                        _824 += "<br/>\r\n";
+
+                        _824 += "&emsp;&emsp;";
+                        _824 += "<span style='cursor:pointer;' title='" + L("点击修改") + "'  onclick='_7555(" + _754 + ")' >\r\n";
+                        _824 += _7293._7458 + L("：") + _7126(_456._7454);
+                        _824 += "</span>\r\n";
+                        _824 += "<img src='/_25.png' title='" + L("复制频率变化随机分布") + "' style='width:16px;height:16px;cursor:pointer;' onclick='_7293._7476(" + _754 + ");' />\r\n";
+                        _824 += "<img src='/_201.png' title='" + L("粘贴频率变化随机分布") + "' style='width:16px;height:16px;cursor:pointer;" + (_7293._7453 ? "" : "-webkit-filter:grayscale(100%);") + "' onclick='_7293._7477(" + _754 + ");' />\r\n";
+                        _824 += "<br/>\r\n";
+                        break;
+                }
+                return _824;
+            }
+            function _7563(_456, _754)
+            {
+                let _824 = "";
+                _824 += "<div id='_7647" + _754 + "'>\r\n";
+                _824 += "<span>" + L("名称：") + "</span><input id='_7675" + _754 + "' type='text' style='width:88px;' value='" + _581._1333(_456._1891) + "' onchange='_7505(" + _754 + ",this.value);' />&nbsp&nbsp\r\n";
+                _824 += "<span>" + L("颜色：") + "</span><span id='_7676" + _754 + "'> </span>&nbsp&nbsp\r\n";
+                switch (_456._7159)
+                {
+                    case F("攫取"):
+                        _824 += "<span title='" + _7292._7157 + "' >" + L("声带振动提取") + "</span>&nbsp&nbsp\r\n";
+                        break;
+                    case F("厚度"):
+                        _824 += "<span title='" + _7154._7157 + "' >" + L("添加包络的录音") + "</span>&nbsp&nbsp\r\n";
+                        break;
+                    case F("纯计算"):
+                        _824 += "<span title='" + _7293._7157 + "' >" + L("没有任何录音数据，纯计算") + "</span>&nbsp&nbsp\r\n";
+                        break;
+                }
+                _824 += "<br/>\r\n";
+                _824 += "<span style='display: inline-block; margin-left: 40px;'>\r\n";
+                if (_456._6939)
+                {
+                    _824 += "<span>";
+                    _824 += "<img src='/_23.png'  style='width:16px;height:16px;'  />\r\n";
+                    _824 += L("根据音符的频率自动设置身高");
+                    _824 += "&nbsp&nbsp";
+                    _824 += "<img src='/_22.png' onclick='_7524(" + _754 + ");' style='width:16px;height:16px;cursor:pointer;' title='" + L("改为身高手动") + "' />\r\n";
+                    _824 += L("指定身高");
+                    _824 += L("。");
+                    _824 += "</span>\r\n";
+                }
+                else
+                {
+                    _824 += "<span>";
+                    _824 += "<img src='/_23.png'  style='width:16px;height:16px;'  />\r\n";
+                    _824 += L("指定身高：");
+                    _824 += "<span id='_7677" + _754 + "'></span>";
+                    _824 += "<span id='_7678" + _754 + "'></span>";
+                    _824 += L("厘米");
+                    _824 += L("，");
+                    _824 += L("音域：");
+                    _824 += "<span id='_7679" + _754 + "'></span>";
+                    _824 += L("，");
+                    _824 += "&nbsp;";
+                    _824 += "<img src='/_22.png' onclick='_7525(" + _754 + ");' style='width:16px;height:16px;cursor:pointer;' title='" + L("改为身高自动") + "' />\r\n";
+                    _824 += L("身高自动");
+                    _824 += L("。");
+                    _824 += "</span>\r\n";
+                }
+                _824 += "<img src='/_25.png' title='" + L("复制身高") + "' style='width:16px;height:16px;cursor:pointer;' onclick='_7526(" + _754 + ");' />\r\n";
+                _824 += "<img src='/_201.png' title='" + L("粘贴身高") + "' style='width:16px;height:16px;cursor:pointer;" + (_1892._7275 ? "" : "-webkit-filter:grayscale(100%);") + "' onclick='_7527(" + _754 + ");' />\r\n";
+                _824 += "<br/>\r\n";
+
+                _824 += L("共振峰宽度：");
+                _824 += "<span id='_7680" + _754 + "'></span>";
+                _824 += "<span id='_7681" + _754 + "'></span>";
+                _824 += L("。") + "\r\n";
+                _824 += "<img src='/_25.png' title='" + L("复制共振峰宽度") + "' style='width:16px;height:16px;cursor:pointer;' onclick='_7532(" + _754 + ");' />\r\n";
+                _824 += "<img src='/_201.png' title='" + L("粘贴共振峰宽度") + "' style='width:16px;height:16px;cursor:pointer;" + (_1892._7285 ? "" : "-webkit-filter:grayscale(100%);") + "' onclick='_7533(" + _754 + ");' />\r\n";
+                _824 += L("（共振峰宽度变宽会让音色更稳重。一句话有多个宽度音色，转化可能有些慢）。")+"\r\n";
+                _824 += "<br/>\r\n";
+
+                _824 += L("滤波：");
+                _824 += _7228(_456._7278);
+                _824 += L("&nbsp;&nbsp;");
+                _824 += "<img src='_457.png' onclick='_7540(" + _754 + ");' style='width:16px;height:16px;cursor:pointer;' title='" + L("编辑") + "' />\r\n";
+                _824 += L("&nbsp;&nbsp;&nbsp;&nbsp;");
+                {
+                    if (_456._7280)
+                        _824 += "<img src='/_23.png'  style='width:16px;height:16px;cursor:pointer;' onclick='_7537(" + _754 + ");' />\r\n";
+                    else
+                        _824 += "<img src='/_22.png'  style='width:16px;height:16px;cursor:pointer;' onclick='_7534(" + _754 + ");' />\r\n";
+                    _824 += L("滤波频率跟随声带频率。");
+                    _824 += "<img src='/_25.png' title='"+L("复制滤波")+"' style='width:16px;height:16px;cursor:pointer;' onclick='_7544(" + _754 + ");' />\r\n";
+                    _824 += "<img src='/_201.png' title='" + L("粘贴滤波") +"' style='width:16px;height:16px;cursor:pointer;" + (_1892._7276 ? "" : "-webkit-filter:grayscale(100%);") + "' onclick='_7545(" + _754 + ");' />\r\n";
+                }
+                _824 += "<br/>\r\n";
+
+                _824 += L("鼻腔共鸣");
+                _824 += "<span id='_7682" + _754 + "'></span>";
+                _824 += L("额窦共鸣");
+                _824 += ", "
+                _824 += "<span id='_7683" + _754 + "'></span>";
+                _824 += L("。");
+                _824 += "<img src='/_25.png' title='" + L("复制鼻腔共鸣") + "' style='width:16px;height:16px;cursor:pointer;' onclick='_7528(" + _754 + ");' />\r\n";
+                _824 += "<img src='/_201.png' title='" + L("粘贴鼻腔共鸣") + "' style='width:16px;height:16px;cursor:pointer;" + ((_1892._7286 !== null) ? "" : "-webkit-filter:grayscale(100%);") + "' onclick='_7529(" + _754 + ");' />\r\n";
+                _824 += L("。鼻腔共鸣让高阶共振峰频率变低，适合圆润的高音；额窦共鸣让高阶共振峰频率变高，适合明亮的高音。");
+                _824 += "<br/>\r\n";
+
+                _824 += L("胸腔共鸣：");
+                if (_456._7282)
+                    _824 += "<img src='/_23.png' onclick='_7530(" + _754 + ");' style='width:16px;height:16px;cursor:pointer;' title='" + L("去掉保留低倍频") + "' />\r\n";
+                else
+                    _824 += "<img src='/_22.png' onclick='_7531(" + _754 + ");' style='width:16px;height:16px;cursor:pointer;' title='" + L("改为保留低倍频") + "' />\r\n";
+                _824 += "<img src='/_25.png' title='" + L("复制胸腔共鸣") + "' style='width:16px;height:16px;cursor:pointer;' onclick='_7538(" + _754 + ");' />\r\n";
+                _824 += "<img src='/_201.png' title='" + L("粘贴胸腔共鸣") + "' style='width:16px;height:16px;cursor:pointer;" + (_1892._7281 ? "" : "-webkit-filter:grayscale(100%);") + "' onclick='_7539(" + _754 + ");' />\r\n";
+                _824 += "<br/>\r\n";
+                _824 += "&emsp;&emsp;<span style='display:inline-block;'>\r\n";
+                if (_456._7282)
+                {
+                    _824 += L("一倍频共鸣幅度：");
+                    _824 += "<span id='_7684" + _754 + "'></span>";
+                    _824 += "<span id='_7685" + _754 + "'></span>";
+                    _824 += "<br/>\r\n";
+                    _824 += L("二倍频共鸣幅度：");
+                    _824 += "<span id='_7686" + _754 + "'></span>";
+                    _824 += "<span id='_7687" + _754 + "'></span>";
+                    _824 += "<br/>\r\n";
+                }
+                _824 += L("（胸腔共鸣，也就是保留低倍频，会让音色更稳重；过大会影响咬字）。");
+                _824 += "</span>\r\n";
+                _824 += "<br/>\r\n";
+
+                _824 += _7561(_456, _754);
+                _824 += "<img src='/_416.png' onclick='_7513(" + _754 + ");' style='width:16px;height:16px;cursor:pointer;' title='" + L("试听音色") + "' />\r\n";
+                _824 += "&nbsp";
+                _824 += "<img src='/_25.png' onclick='_7509(" + _754 + ");' style='width:16px;height:16px;cursor:pointer;' title='" + L("拷贝音色") + "' />\r\n";
+                _824 += "&nbsp";
+                _824 += "<img src='/_222.png' onclick='_7514(" + _754 + ");' style='width:16px;height:16px;cursor:pointer;' title='" + L("下载音色") + "' />";
+                _824 += "&nbsp";
+                if (_754 < _7556)
+                {
+                    _824 += "<img src='/_27.png' style='width:16px;height:16px;cursor:default; -webkit-filter:grayscale(100%);' title='" + L("删除音色") + "' />";
+                    _824 += "&nbsp";
+                }
+                else
+                {
+                    _824 += "<img src='/_27.png' onclick='_7512(" + _754 + ");' style='width:16px;height:16px;cursor:pointer;' title='" + L("删除音色") + "' />";
+                    _824 += "&nbsp";
+                }
+                _824 += "</span >\r\n";
+                _824 += "</div >\r\n";
+                return _824;
+            }
+            let _824 = "";
+            for (let _754 = 0; _754 < _7461.length; _754++)
+                _824 += _7563(_7461[_754], _754);
+            _502.innerHTML = _824;
+            for (let _754 = 0; _754 < _7461.length; _754++)
+            {
+                let _456 = _7461[_754];
+
+                let _6104;
+                _6104 = document.getElementById("_7675" + _754);
+                if (_754 < _7556)
+                    _6104.disabled = true;
+
+                _6104 = document.getElementById("_7676" + _754);
+                _6076(_6104, 30, 15, function (color) { _7461[_754]._7274 = color; });
+                _6104._693(_456._7274);
+                if (_754 < _7556)
+                    _6104._967(false);
+
+                
+                {
+                    _6104 = document.getElementById("_7680" + _754);
+                    _6104._754 = _754;
+                    function _7564(value)
+                    {
+                        if (value < 1)
+                            value = _581._761(0.75, 1, 0, 1, value);
+                        else
+                            value = _581._761(1, 5, 1, 3, value);
+                        let _7565 = document.getElementById("_7681" + this._754);
+                        value = value.toFixed(2);
+                        _7565.innerText = value;
+                        _456._1794 = Number(value);
+                    }
+                    _1074(_6104, 0, 3, _7564, 150, 15);
+                    _6104._1077(true);
+                    let value;
+                    value = _456._1794;
+                    if (value < 1)
+                        value = _581._761(0, 1, 0.75, 1, value);
+                    else
+                        value = _581._761(1, 3, 1, 5, value);
+                    _6104._837(value);
+                    _7564.call(_6104, value);
+                }
+
+                
+                if (!_456._6939)
+                {
+                    _6104 = document.getElementById("_7677" + _754);
+                    _6104._754 = _754;
+                    function _7566(value)
+                    {
+                        let _7567 = document.getElementById("_7678" + this._754);
+                        value = value.toFixed(1);
+                        _7567.innerText = value;
+                        let _1728;
+                        _1728 = _1706._1726(Number(value));
+                        let _7568, _7569, _7570;
+                        _7568 = _7569 = _7570 = Math.round(_1706._1710(_1728));
+                        _7568 -= 6;
+                        _7569 += 6;
+                        let _1842;
+                        _1842 = "";
+                        _1842 += L("声域：");
+                        _1842 += _1706._1712(_7568, "LETTER") + "~" + _1706._1712(_7569, "LETTER");
+                        _1842 += L("，");
+                        _1842 += L("中心：");
+                        _1842 += _1706._1712(_7570, "LETTER");
+                        let _7571;
+                        _7571 = document.getElementById("_7679" + this._754);
+                        _7571.innerText = _1842;
+                        let _456 = _7461[_754];
+                        _456._7147 = Number(value);
+                    }
+                    _1074(_6104, 30, 200, _7566, 150, 15);
+                    _6104._1077(true);
+                    _6104._837(_456._7147);
+                    _7566.call(_6104, _456._7147);
+                }
+
+                
+                {
+                    _6104 = document.getElementById("_7682" + _754);
+                    _6104._754 = _754;
+                    function _7572(value)
+                    {
+                        let _7573 = document.getElementById("_7683" + this._754);
+                        value = value.toFixed(2);
+                        _7573.innerText = value;
+                        _456._1795 = Number(value);
+                    }
+                    _1074(_6104, -1, 1, _7572, 150, 15);
+                    _6104._1077(true);
+                    let value;
+                    value = _456._1795;
+                    _6104._837(value);
+                    _7572.call(_6104, value);
+                }
+
+
+                
+                if (_456._7282)
+                {
+                    let _7574 = document.getElementById("_7684" + _754);
+                    _7574._754 = _754;
+                    function _7575(_7576)
+                    {
+                        let _7577;
+                        if (_7576 < 1)
+                            _7577 = _581._761(0, 1, 0, 1, _7576);
+                        else
+                            _7577 = _581._761(1, 5, 1, 2, _7576);
+                        let _7578 = document.getElementById("_7685" + this._754);
+                        _7577 = _7577.toFixed(2);
+                        _7578.innerText = _7577;
+                        _456._7283 = Number(_7577);
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    }
+                    _1074(_7574, 0, 2, _7575, 150, 15);
+                    _7574._1077(true);
+                    let value;
+                    value = _456._7283;
+                    if (value < 1)
+                        value = _581._761(0, 1, 0, 1, value);
+                    else
+                        value = _581._761(1, 2, 1, 5, value);
+                    _7574._837(value);
+                    _7575.call(_7574, value);
+
+
+                    let _7579 = document.getElementById("_7686" + _754);
+                    _7579._754 = _754;
+                    function _7580(_7576)
+                    {
+                        let _7577;
+                        if (_7576 < 1)
+                            _7577 = _581._761(0, 1, 0, 1, _7576);
+                        else
+                            _7577 = _581._761(1, 5, 1, 2, _7576);
+                        let _7581 = document.getElementById("_7687" + this._754);
+                        _7577 = _7577.toFixed(2);
+                        _7581.innerText = _7577;
+                        _456._7284 = Number(_7577);
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    }
+                    _1074(_7579, 0, 2, _7580, 150, 15);
+                    _7579._1077(true);
+                    value = _456._7284;
+                    if (value < 1)
+                        value = _581._761(0, 1, 0, 1, value);
+                    else
+                        value = _581._761(1, 2, 1, 5, value);
+                    _7579._837(value);
+                    _7580.call(_7579, value);
+                }
+
+
+                if ((_456._7159 == F("厚度") || _456._7159 == F("攫取")) && _456._7161 == F("全频段厚度同一"))
+                {
+                    _6104 = document.getElementById("_7673" + _754);
+                    _6104._754 = _754;
+                    function _7582(value)
+                    {
+                        let text = document.getElementById("_7674" + this._754);
+                        value = value.toFixed(4);
+                        text.innerText = value;
+                        let _456 = _7461[_754];
+                        _456._7162 = Number(value);
+                    }
+                    _1074(_6104, -1, 1, _7582, 150, 15);
+                    _6104._1077(true);
+                    _6104._837(_456._7162);
+                }
+            }
+
+            {
+                let _7583;
+                _7583 = false;
+                for (let _754 = 0; _754 < _7461.length; _754++)
+                {
+                    let _456 = _7461[_754];
+                    if (_456._7159 == F("厚度"))
+                    {
+                        _7583 = true;
+                        break;
+                    }
+                }
+                if (_7583)
+                {
+                    _505.disabled = true;
+                    _505.title = L("已经有一个赵磊音色了，保存文件太大，有一个就行了");
+                }
+                else
+                {
+                    _505.disabled = false;
+                    _505.title = "";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+

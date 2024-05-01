@@ -1,0 +1,324 @@
+<html>
+<head>
+    <script src="_199.js"></script>
+    <script src="languages.js"></script>
+    <script src="_18.js"></script>
+    <script src="_431.js"></script>
+    <script src="_196.js"></script>
+    <script src="_510.js"></script>
+    <script src="_455.js"></script>
+    <script src="_429.js"></script>
+    <script src="_445.js"></script>
+    <script src="_446.js"></script>
+    <script src="_448.js"></script>
+    <script src="_447.js"></script>
+    <script src="_226.js"></script>
+    <script src="_268.js"></script>
+    <script src="_198.js"></script>
+    <script src="_303/_307.js"></script>
+    <script src="_303/_331.js"></script>
+    <script src="_303/_365.js"></script>
+    <script src="_303/_305.js"></script>
+    <script src="_303/_332.js"></script>
+    <script src="_303/_360.js"></script>
+    <script src="_303/_361.js"></script>
+    <script src="_303/_362.js"></script>
+    <script src="_303/_363.js"></script>
+    <script src="_303/_358.js"></script>
+    <script src="_303/_359.js"></script>
+    <script src="_303/_306.js"></script>
+    <script>var _576 = null;</script>
+    <script type="module">import { PinyinHelper } from '/_303/_311/pinyin4js/PinyinHelper.js'; _576 = PinyinHelper;</script>
+    <script src="_303/_311/segmentit/segmentit.js"></script>
+    <script src="_303/_311/_312.js"></script>
+    <script src="_303/_329/英语单词映射数组.js"></script>
+    <script src="_303/_329/_329.js"></script>
+    <script src="_303/_308/kuromoji/kuromoji.js"></script>
+    <script src="_303/_308/_309/_310.js"></script>
+    <script src="_303/_328/粤语单词表.js"></script>
+    <script src="_303/_328/_328.js"></script>
+    <script src="_303/_303.js"></script>
+    <script src="_303/node-x-sampa-ipa/capital.json.js"></script>
+    <script src="_303/node-x-sampa-ipa/diacritics.json.js"></script>
+    <script src="_303/node-x-sampa-ipa/lowercase.json.js"></script>
+    <script src="_303/node-x-sampa-ipa/other.json.js"></script>
+    <script src="_303/node-x-sampa-ipa/index.js"></script>
+</head>
+<body onload="TranslateAll();" style="background-image: url(_7.jpg); background-size: 100% 100%; " onkeyup="if(event.key=='Escape'){ if(parent) parent._577();}">
+    <div style="text-align: right; width: 100%;">
+        <label id="_2" style="display: inline-block; cursor: pointer; text-align: center; position: fixed; top: 0px;" onclick="if(parent) parent._577();">
+            <img src="_301.png" title="L(返回到歌曲编辑器（Esc）)" style="width:32px;height:32px;" /><br />
+            <span>L(返回)</span>
+        </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </div><br />
+    <script>
+        var _578 = false;
+        function _579()
+        {
+            if (parent && parent._43.style.top == "-1px")
+            {
+                parent._580();
+                _578 = false;
+            }
+            else
+            {
+                _578 = true;
+            }
+            _581._582(_2, false);
+        }
+        function _583()
+        {
+            _581._582(_2, true);
+            if (parent && !_578)
+                parent._577();
+        }
+    </script>
+
+
+    <div style="text-align:center;font-size:xx-large">API</div>
+    <span onclick="window.open('api_example.htm','_blank')" style="cursor: pointer; color: blue; text-decoration: underline;">API example</span><br />
+    <br />
+    <div>Internal network penetrate: </div>
+    <div style="border-width:1px;border-style:inset;display:inline-block;">
+        <span>State: </span>
+        <span id="_3"></span><br />
+        <span>Keep alive recevied from asp server: </span>
+        <span id="_4">0</span><br />
+        <span>Keep alive sent to asp server: </span>
+        <span id="_5">0</span><br />
+    </div>
+    <br /><br />
+    <div>Log: </div>
+    <pre id="_6" style="border-width: 1px; border-style: inset; display: inline-block;"></pre>
+
+    
+    <script>
+        
+        let _584 = -1;
+        let _585 = new Array();
+
+        let _39 = new Object();
+        _39.contentWindow = new Object();
+        let _586 = "";
+        _39.contentWindow._587 = function (_588) { _586 = _588; };
+        function _589() { }
+        _39.contentWindow._590 = function () { return _586; };
+
+        let _40 = new Object();
+        _40.contentWindow = new Object();
+        let _591 = "";
+        _40.contentWindow._587 = function (_592) { _591 = _592; };
+        function _593() { }
+        _40.contentWindow._590 = function () { return _591; };
+
+        let _594 = "";
+        _595._587 = function (_596) { _594 = _596; };
+        _595._590 = function () { return _594; };
+        _595._597 = function () { };
+
+        let _41 = new Object();
+        _41.contentWindow = new Object();
+        let _598 = "";
+        _41.contentWindow._587 = function (_599) { _598 = _599; };
+        _41.contentWindow._590 = function () { return _598; };
+
+        let _37 = new Object();
+        _37.contentWindow = new Object();
+        let _600 = "";
+        _37.contentWindow._587 = function (_601) { _600 = _601; };
+        _37.contentWindow._590 = function () { return _600; };
+
+        let _36 = new Object();
+        _36.contentWindow = new Object();
+        _36.contentWindow._602 = function (_603) { return null; };
+
+
+        let _604 = "";
+        function _605(_606) { _604 = _606; }
+        function _607() { return _604; }
+
+        let _608 = "";
+        function _609(_610) { _608 = _610; }
+
+        let _611 = new Object();
+        _611._612 = function () { };
+
+        let _613 = "";
+
+        function _614()
+        {
+            _613 = "";
+            _585.length = 0;
+            _586 = _591 = _594 = _598 = _600 = _604 = _608 = "";
+            _584 = - 1;
+        }
+
+        function _615() { }
+        function _616() { }
+        let _617 = new Object();
+        _617._618 = function () { };
+        _617._619 = function (_620) { };
+
+        let _621 = new Object();
+        _621._622 = function (_623) { return _623; };
+        _621._624 = function (_623) { return _623; };
+        _621._625 = function (_623) { return _623; };
+        _621._626 = function (_623) { return _623; };
+        _621._627 = function (_623) { return _623; };
+        _621._628 = function (_623) { return _623; };
+
+
+        let _629 = new Object();
+        _629._619 = function (_620) { };
+
+        let _53 = new Object;
+        _53.checked = true;
+
+        let _74 = new Object();
+        _74.value = "vocal";
+
+        function _630(){ }
+        
+        function _631(_632, _633)
+        {
+            let buffer = new _634();
+            for (let _635 = 0; _635 < 2; _635++)
+            {
+                if (_635 == 0)
+                    buffer._636();
+                else
+                    buffer._637();
+                buffer._638(_632);
+                if (_633 !== undefined)
+                    buffer._638(_633);
+            }
+            parent._639(buffer._640);
+        }
+        function _641(_642)
+        {
+            _613 = _643(_642);
+            if (_613)
+                return null;
+            if (_585.length == 0)
+            {
+                _613 = "line_length_is_0";
+                return null;
+            }
+            if (_584 < 0)
+                _584 = 0;
+            return _644("_7688");
+        }
+        async function _645(_445,_620)
+        {
+            let _646;
+            _646 = await parent._647(_445, _620);
+            return _646;
+        }
+        async function _648(_649)
+        {
+            let _650;
+            _650 = _6.innerHTML;
+            _650 = _650.slice(-1000);
+            _650 += new Date().toISOString().replace('T', ' ') + " New project task: ";
+            _614();
+            _649 = decodeURIComponent(_649);
+            let _651;
+            _651 = _641(_649);
+            if (_651 == null)
+            {
+                _631("API_DecodeProjectStringFailed", _613);
+                _6.innerHTML = _650 + "API_DecodeProjectStringFailed\r\n";
+                return;
+            }
+            _6.innerHTML = _650 + _604 + "\r\n"
+            let _646;
+            _646 = await _645(_585[_584], _584);
+            if (_646 === null)
+            {
+                _631("API_TSSGetParameterFaild");
+                _6.innerHTML = _650 + "API_TSSGetParameterFaild\r\n";
+                return;
+            }
+            let buffer = new _634();
+            for (let _635 = 0; _635 < 2; _635++)
+            {
+                if (_635 == 0)
+                    buffer._636();
+                else
+                    buffer._637();
+                buffer._638("API_ProjectStringAndTTSParameterReady");
+                buffer._638(_651);
+                buffer._638(_646);
+            }
+            parent._639(buffer._640);
+        }
+        function _652(_653, _654)
+        {
+            let _445;
+            _445 = _585[_584];
+            _445._655._656 = new Float64Array(_653._640);
+            for (let _657 = 0; _657 < _658._659; _657++)
+            {
+                let _660;
+                _660 = _654[_657];
+                let _661;
+                if (_660)
+                    _661 = _660._640;
+                if (_661)
+                    _445._662[_657]._656 = new Float64Array(_661);
+                else
+                    _445._662[_657]._656 = null;
+            }
+            _445._663._656 = null;
+            _445._664._656 = null;
+            _445._665._656 = null;
+            let _510;
+            _510 = _445._666();
+            let buffer = new _634();
+            for (let _635 = 0; _635 < 2; _635++)
+            {
+                if (_635 == 0)
+                    buffer._636();
+                else
+                    buffer._637();
+                buffer._638("API_Success");
+                buffer._667(_510._656);
+            }
+            parent._639(buffer._640);
+            _6.innerHTML += "    Finished(" + _510._656.length + " samples)\r\n"
+        }
+    </script>
+
+
+
+
+    
+    <script>
+        function _668()
+        {
+            let _669;
+            _669 = _4.innerHTML;
+            _669 = Number(_669);
+            _669++;
+            _4.innerHTML = _669;
+        }
+        function _670()
+        {
+            let _669;
+            _669 = _5.innerHTML;
+            _669 = Number(_669);
+            _669++;
+            _5.innerHTML = _669;
+        }
+        function _671()
+        {
+            _3.innerHTML = "off";
+        }
+        function _672()
+        {
+            _3.innerHTML = "on";
+        }
+    </script>
+</body>
+</html>
+

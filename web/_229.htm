@@ -1,0 +1,73 @@
+<html>
+<head>
+    <script src="_202.js"></script>
+    <script src="languages.js"></script>
+</head>
+<body style="overflow:hidden;">
+    <img id="_230" src="_11/_12_3.jpg" style="position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; z-index: -1; opacity:0.6;" />
+    <div style="text-align: center; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);">
+        <span style="display: inline-block; border-style:outset;background-color:rgb(200 200 200 / 0.35);border-width:2px;padding:40px;">
+            <div id="_231" style="font-size:xx-large;">L(欢迎使用《大市唱》虚拟歌手)</div>
+            <div id="_232" style="display:inline-block;width:400px;height: 30px;"></div>
+            <script>_1049(_232);</script>
+            <div id="_233" style="font-size:xx-large;">Loading...</div>
+            <input id="_234" type="button" value="L(确定)" onclick="_1829();" />
+        </span>
+    </div>
+    <div id="_235" style="position: absolute; top: 100%; transform: translateY(-100%); width:100%;">
+        <div style="text-align:right;position:relative;left:-20px;top:-10px;">L(版权所有 赵磊)</div>
+    </div>
+    <script>
+        TranslateAll();
+        function _1830(_912, _913)
+        {
+            _231.innerHTML = _912;
+            if (_913)
+            {
+                _233.innerHTML = _913;
+                _233.style.display = "";
+            }
+            else
+            {
+                _233.style.display = "none";
+            }
+        }
+        function _1831(_912, _913)
+        {
+            _1830(_912, _913);
+            _232.style.display = "none";
+            _234.style.display = "";
+            _235.style.display = "none";
+            _230.src = "_11/_12_5.jpg";
+        }
+        var _1832 = true;
+        function _1833(_912, _913)
+        {
+            _1830(_912, _913);
+            _232.style.display = "inline-block";
+            _234.style.display = "none";
+            if (_1832)
+            {
+                _1832 = false;
+                _235.style.display = "";
+                _230.src = "_11/_12_3.jpg";
+            }
+            else
+            {
+                _235.style.display = "none";
+                _230.src = "_11/_12_4.jpg";
+            }
+        }
+        function _1834(_1835, _1836)
+        {
+            _232._837(_1835, _1836);
+        }
+        function _1829()
+        {
+            if (parent && parent._905)
+                parent._905();
+        }
+    </script>
+</body>
+</html>
+

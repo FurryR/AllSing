@@ -1,0 +1,290 @@
+﻿<html>
+<head>
+	<script>
+		async function Go()
+		{
+			go_button.disabled = true;
+            current_working.style.color = "";
+            current_working.innerText = "initializing...";
+			process.innerText = "0/0";
+            key_signature.innerText = "";
+
+			let url;
+			url = "API.aspx";
+            //url = "http://127.0.0.1/API.aspx";// web.config <add name="Access-Control-Allow-Origin" value="*" />
+            //url = "http://127.0.0.1:48751/API.aspx";
+            //url = "http://dashichang.work/API.aspx";
+
+			let project_file_string;
+			project_file_string = input_data.innerHTML;
+            project_file_string = encodeURIComponent(project_file_string);
+
+			let response;
+            response = await fetch(url, { method: 'POST', body: project_file_string });
+            let reader;
+			reader = response.body.getReader();
+			let api_ret = "";
+			let utf8_decoder = new TextDecoder("utf-8"); 
+			let diconneted = true;
+			while (true)
+			{
+                let { done, value } = await reader.read();
+                if (!value)
+					break;
+				api_ret += utf8_decoder.decode(value);
+				//returns string of the form like "name#data;"
+				//only contains URL legal characters
+				//started#;
+				//error#server_is_off;
+				//dsc_to_wave#%d_%d;
+				//timbre#%d_%d;
+				//result#df54sad65f4ds6f;
+				while(api_ret.includes(";"))
+				{
+					let index;
+					index = api_ret.indexOf(";");
+					let string;
+                    string = api_ret.substring(0, index);
+					api_ret = api_ret.substring(index + 1);
+                    index = string.indexOf("#");
+					let name, parameter;
+                    name = string.substring(0, index);
+					parameter = string.substring(index + 1);
+                    switch (name)
+					{
+                        case "started":
+							current_working.style.color = "";
+                            current_working.innerText = "started";
+                            process.innerText = "0/0";
+							break;
+                        case "error":
+                            current_working.style.color = "red";
+                            current_working.innerText = parameter;
+							process.innerText = "0/0";
+							diconneted = false;
+							break;
+						case "key_signature":
+                            key_signature.innerText = "key signature is auto set to " + parameter;
+                            break;
+                        case "timbre_process":
+                            current_working.style.color = "";
+                            current_working.innerText = "timbre";
+                            process.innerText = parameter;
+                            break;
+                        case "project_to_wave_process":
+                            current_working.style.color = "";
+                            current_working.innerText = "project  to wave";
+                            process.innerText = parameter;
+                            break;
+						case "result":
+							parameter = parameter.replaceAll(' ','+');
+                            const dataUrl = `data:application/octet-stream;base64,${parameter}`;
+                            const a = document.createElement('a');
+                            a.href = dataUrl;
+                            a.download = "dsc.wav";
+                            document.body.appendChild(a);
+                            a.click();
+                            document.body.removeChild(a);  
+                            current_working.style.color = "DarkGreen";
+                            current_working.innerText = "successs";
+							process.innerText = "0/0";
+                            diconneted = false;
+							break;
+					}
+				}
+                if (done)
+                    break;
+			}
+			go_button.disabled = false;
+			if (diconneted)
+			{
+                current_working.style.color = "red";
+                current_working.innerText = "diconneted!";
+				process.innerText = "0/0";
+			}
+		}
+	</script>
+</head>
+<body>
+	<div style="text-align:center;font-size:xx-large">API Example</div>
+	<div style="font-size:x-large">Input data:</div>
+	<pre id="input_data" style="border-width:1px;border-style:inset;height:400px;overflow:scroll;">
+{
+	"文件签名": "dscm",
+	"主版本号": 1,
+	"副版本号": 2,
+	"歌曲名称": "Doraemon",
+	"文件名": "Doraemon",
+	"作者": "赵磊",
+	"组织": "没有组织是个人",
+	"说明": "这家伙很懒，什么都没留下",
+	"正在编辑的行的索引": 0,
+	"声乐曲":
+	[
+		{
+			"角色":
+			[
+				"女生1",
+				"",
+				"",
+				"",
+				""
+			],
+			"语种": "japanese",
+			"音符":
+			[
+				{
+					"音高": 57,
+					"时长": 0.375,
+					"连音": false,
+					"休止符": false,
+					"歌词": "こ"
+				},
+				{
+					"音高": 57,
+					"时长": 0.375,
+					"连音": false,
+					"休止符": false,
+					"歌词": "ん"
+				},
+				{
+					"音高": 60,
+					"时长": 0.25,
+					"连音": false,
+					"休止符": false,
+					"歌词": "な"
+				},
+				{
+					"音高": 60,
+					"时长": 0.75,
+					"连音": false,
+					"休止符": false,
+					"歌词": "こ"
+				},
+				{
+					"音高": 64,
+					"时长": 0.25,
+					"连音": false,
+					"休止符": false,
+					"歌词": "と"
+				},
+				{
+					"音高": 69,
+					"时长": 0.75,
+					"连音": false,
+					"休止符": false,
+					"歌词": "い"
+				},
+				{
+					"音高": 64,
+					"时长": 0.25,
+					"连音": false,
+					"休止符": false,
+					"歌词": "い"
+				},
+				{
+					"音高": 67,
+					"时长": 1,
+					"连音": false,
+					"休止符": false,
+					"歌词": "な"
+				},
+				{
+					"音高": 67,
+					"时长": 0.75,
+					"连音": false,
+					"休止符": false,
+					"歌词": "で"
+				},
+				{
+					"音高": 69,
+					"时长": 0.25,
+					"连音": false,
+					"休止符": false,
+					"歌词": "き"
+				},
+				{
+					"音高": 67,
+					"时长": 0.75,
+					"连音": false,
+					"休止符": false,
+					"歌词": "た"
+				},
+				{
+					"音高": 64,
+					"时长": 0.25,
+					"连音": false,
+					"休止符": false,
+					"歌词": "ら"
+				},
+				{
+					"音高": 65,
+					"时长": 0.75,
+					"连音": false,
+					"休止符": false,
+					"歌词": "い"
+				},
+				{
+					"音高": 64,
+					"时长": 0.25,
+					"连音": false,
+					"休止符": false,
+					"歌词": "い"
+				},
+				{
+					"音高": 62,
+					"时长": 1,
+					"连音": false,
+					"休止符": false,
+					"歌词": "な"
+				}
+			],
+			"调号自动": false,
+			"调号": 60,
+			"每分钟拍数": 120,
+			"说唱": false,
+			"技巧":
+			[
+			]
+		}
+	],
+	"音色":
+	[
+		{
+			"签名": "大市唱音色1.0",
+			"类型": "纯计算",
+			"名称": "女生1",
+			"颜色": "blue",
+			"身高": 150.099999999999994316,
+			"身高自动": false,
+			"滤波": {"控制点数组":[{"m开始x":12.653326200783631,"m峰的x":28.59597412443223,"m结束x":50,"m峰值":0.5275397796817626,"m左尖锐":1,"m右尖锐":0.1,"m增加":false}],"最小值x":0,"最大值x":8000,"最小值y":-1,"最大值y":1,"只能为正":false},
+			"滤波跟随频率": false,
+			"保留低倍频": true,
+			"第一倍频振幅": 1.32000000000000006217,
+			"第二倍频振幅": 1.32000000000000006217,
+			"共振峰宽度": 3.0,
+			"高阶共振峰频谱位置": -0.200000000000000011102,
+			"音色":
+			{
+				"振幅变化": {"最小值":0,"最大值":1,"控制点数组":[{"m倍频":1,"m值":0}]},
+				"振幅变化速度": {"最小值":0,"最大值":10,"控制点数组":[{"m倍频":1,"m值":0.2}]},
+				"振幅变化随机分布": {"控制点数组":[{"m倍频":1,"m值":0.5}],"最小值":-1,"最大值":1},
+				"频率变化": {"控制点数组":[{"m倍频":1,"m最大值":0.01,"m最小值":-0.01}],"最小值":-0.15,"最大值":0.15,"上下对称":true},
+				"频率变化速度": {"最小值":0,"最大值":10,"控制点数组":[{"m倍频":1,"m值":0.2}]},
+				"频率变化随机分布": {"控制点数组":[{"m倍频":1,"m值":0.5}],"最小值":-1,"最大值":1}
+			}
+		}
+	]
+}
+
+    </pre>
+	<div style="font-size:x-large">Current working:</div>
+	<div id="current_working">free</div>
+	<div id="key_signature"></div>
+	<div style="font-size:x-large">Process:</div>
+	<div id="process">0/0</div>
+	<div style="text-align:center;">
+		<input id="go_button" type="button" value="Go" onclick="Go();" style="width:100px;height:40px;" />
+	</div>
+</body>
+</html>

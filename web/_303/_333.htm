@@ -1,0 +1,748 @@
+<html>
+<head>
+    <script src="/_199.js"></script>
+    <script src="/languages.js"></script>
+    <script src="/_371.js"></script>
+    <script src="/_17.js"></script>
+    <script src="/_218.js"></script>
+    <script src="/_455.js"></script>
+    <script src="/_447.js"></script>
+    <script src="/_206.js"></script>
+    <script src="node-x-sampa-ipa/capital.json.js"></script>
+    <script src="node-x-sampa-ipa/diacritics.json.js"></script>
+    <script src="node-x-sampa-ipa/lowercase.json.js"></script>
+    <script src="node-x-sampa-ipa/other.json.js"></script>
+    <script src="node-x-sampa-ipa/index.js"></script>
+    <script src="_307.js"></script>
+    <script src="_331.js"></script>
+    <script src="_365.js"></script>
+    <script src="_367.js"></script>
+    <script src="_364.js"></script>
+    <script src="_357.js"></script>
+    <script src="_366.js"></script>
+    <script src="_360.js"></script>
+</head>
+<body onload="TranslateAll();" style="background-image: url(_333.jpg); background-size: 100% 100%; " onresize="_5316();" onkeyup="if (event.key == 'Escape') {  _2.dispatchEvent( new _5317('click', {'view': window, 'bubbles': true, 'cancelable': true}));}">
+    <div style="text-align: right; width: 100%;">
+        <label id="_334" style="display: none; cursor: pointer; text-align: center; position: fixed; top: 0px; width: 200px; transform: translateX(-200px); cursor: zoom-out;" onclick="_5318();">
+            <img src="/_20.png" title="L(结束放大显示)" style="width:32px;height:32px;" /><br />
+            <span>L(结束放大显示)</span>
+        </label>
+        <label id="_2" style="display: inline-block; cursor: pointer; text-align: center; position: fixed; top: 0px;" onclick="_5319 = null; _5320 = null; _5321 = null;_5322 = null; if (parent) parent._1884();">
+            <img src="/_301.png" title="L(返回到歌曲编辑器（Esc）)" style="width:32px;height:32px;" /><br />
+            <span>L(返回)</span>
+        </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </div><br />
+    <div style="text-align:center;">
+        
+        <span style="font-size: xx-large;" id="_335"></span 
+        ><span style="font-size: large;" title="L(出处)" id="_336"></span> &nbsp;&nbsp;
+        <span style="font-size: xx-large;" title="L(发音)" id="_337">
+             <span style="cursor: pointer; color:rgb(0 180 0 / 0.4);" title="L(可以借入，实现连读)" id="_338" onclick="_5323();"></span
+            ><span style="cursor: pointer; color: rgb(0 180 0);" title="L(为实现连读，借入的)" id="_339" onclick="_5324();"></span
+            ><span style="cursor: pointer; color: rgb(168 70 70);" title="L(可以去掉)" id="_340" onclick="_5325();"></span
+            ><span style="cursor: pointer; color: rgb(255 100 100); text-decoration: line-through;" title="L(已经去掉)" id="_341" onclick="_5326();"></span
+            ><span style="" title="L(发音)" id="_342"></span
+            ><span style="cursor: pointer; color: rgb(168 70 70);" title="L(可以去掉（单击），也可以借出实现连续（点击3次，或者右键）)" id="_343" onclick="_5327();" oncontextmenu="_5328();event.preventDefault();"></span
+            ><span style="cursor: pointer; color: rgb(255 100 100); text-decoration: line-through;" title="L(已经去掉)" id="_344" onclick="_5329();"></span
+            ><span style="cursor: pointer; color: rgb(50 50 200 )" title="L(可以借出实现连读（单击），也可以去掉（点击3次，或者右键）)" id="_345" onclick="_5328();" oncontextmenu="_5327();event.preventDefault();"></span
+            ><span style="cursor: pointer; color: rgb(100 100 250); text-decoration: line-through;" title="L(为了实现连读，已经借出)" id="_346" onclick="_5330();"></span>
+        </span> &nbsp;&nbsp;
+        
+        <span style="font-size: xx-large;" title="L(国际音标)" id="_347">
+
+        </span>
+        
+    </div>
+    <br /><br />
+    <nobr id="_348" style="font-size:0px;">
+        <span id="_349" style="display: inline-block; text-align: right; vertical-align: top; font-size:initial;">
+            <span id="_350" style="display: inline-block; background-color: rgb(255 0 0 / 0.035); ">
+                <span style="position: relative; top: 50%; display: inline-block; transform: translateY(-50%);">
+                    <span>L(音量)</span><br />
+                    <small style="color: rgb(150,50,10);">L(声带音)</small><br />
+                    <small style="color: rgb(50,10,200);">L(清擦音)</small><br />
+                    <small style="color: rgb(20,100,20);">L(浊辅音前声带音)</small><br />
+                </span>
+            </span><br />
+            <span id="_351" style="display: inline-block; background-color: rgb(0 255 0 / 0.035); height:35px;">
+                <span style="position: relative; top: 50%; display: inline-block; transform: translateY(-50%);">L(音标口型)</span>
+            </span><br />
+            <span id="_352" style="display: inline-block; background-color: rgb(0 0 255 / 0.035); ">
+                <span style="position: relative; top: 50%; display: inline-block; transform: translateY(-50%);">L(参数变化示意)</span>
+            </span><br />
+        </span>
+        <svg id="_353" style="vertical-align: top; font-size: initial; "></svg>
+    </nobr>
+    <span id="_354" style="display: inline-block;position:relative;">
+        <span id="_355" style="display: inline-block;position:relative;"></span>
+        <img id="_356" src="_304.png" title="L(正常比例时间窗口显示)" style="width: 20px; height: 20px; cursor:pointer;" onclick="_5318();" />
+    </span>
+
+    <br /><br />
+
+    <script>
+        var _5319 = null;
+        var _5320 = null;
+        var _5321 = null;
+        let _5331 = null;
+        let _5332 = null;
+        var _5322 = null;
+        var _5333;
+        var _5334;
+        let _5335 = 35;
+        let _5336, _5337;
+        var _5338;
+        var _5339;
+        var _5340 = new Array();
+        var _5341 = 0;
+        var _5342 = new Array();
+        var _5343 = new Array();
+        function _5344(_754, _5345)
+        {
+            if (_754 == 0 && _5345 == "_1350")
+                return false;
+            if (_754 == _5322.length - 1 && _5345 == "_1351")
+                return false;
+            let _5346 = _5322[_754];
+            if (_5345 == "_1350")
+            {
+                let _1350 = _5322[_754 - 1];
+                if (_1350._1787 == _5346._1784)
+                    if (_1350._1784 != _1350._1787)
+                        return true;
+            }
+            if (_5345 == "_1351")
+            {
+                let _1351 = _5322[_754 + 1];
+                if (_5346._1787 == _1351._1784)
+                    if (_1351._1784 != _1351._1787)
+                        return true;
+            }
+            return false;
+        }
+        function _5347(_5348, _305, _754)
+        {
+            let _1013 = 16;
+            let _5349 = _305._1784;
+            let _5350 = _305._1787;
+            let _5351 = _1665._5281(_305._1784)._1232;
+            let _5352 = _1665._5281(_305._1787)._1232;
+            let _5353 = _305._1786 ? _1665._5281(_305._1786)._1232 : null;
+            let _5354 = _305._5355;
+            let _5356, _5357, _5358;
+            let _5359, _5360, _5361;
+            [_5356, _5357, _5358] = _1665._5298(_5349);
+            [_5359, _5360, _5361] = _1665._5298(_5350);
+            let _2090;
+            let _5362, _5363;
+            _5362 = _305._3030;
+            _5363 = _305._3032;
+            _2090 = _5363 - _5362 + 1;
+            function _5364(_5365)
+            {
+                if (_5349 == _5350)
+                    return _5365;
+                if (_5365 < 0 || _5365 > 1)
+                    return _5365;
+                let _987;
+                _987 = Math.pow(_5365, _5354);
+                _987 = (1 - Math.cos(_987 * Math.PI)) / 2;
+                return _987;
+            }
+            function _5366(_5365)
+            {
+                if (_5349 == _5350)
+                    return _5365;
+                if (_5365 <= 0 || _5365 >= 1)
+                    return _5365;
+                let _987;
+                _987 = Math._1323(1 - _5365 * 2) / Math.PI;
+                _987 = Math.pow(_987, 1 / _5354);
+                return _987;
+            }
+
+            let _5367;
+            _5367 = "";
+            
+            let _5368;
+            _5368 = 0;
+            _5367 += _366(_5322, _754, _5368, _5319._1621._1773);
+            _5368 += _5336;
+
+            
+            if (_5349 == _5350)
+            {
+                let _1962;
+                _1962 = "";
+                if (_1962)
+                    _1962 = "onmouseover =\"_218('" + _1962 + "');\"";
+                _5367 += "<rect id='_7636" + _5341 + "' style='fill:rgb(0 255 0 / 0.1); stroke-width:0;' />\r\n";
+                _5367 += "<text id='_7637" + _5341 + "' text-anchor='middle' dominant-baseline='middle' x='" + ((_5362 + _5363) / 2) + "' y='" + (_5368 + _5335 / 2) + "' style='font-size:x-large;'  " + _1962 + ">" + _5351 + "</text>\r\n";
+                _5341++;
+            }
+            else
+            {
+                {
+                    let _5369;
+                    let _1962;
+                    _1962 = "";
+                    if (_305._3026)
+                    {
+                        _5369 = "fill:rgb(0 0 0 / 0.3);";
+                        _1962 += L("不参与口型参数变化，只是声带开始振动");
+                    }
+                    else
+                    {
+                        _5369 = "";
+                    }
+                    if (_1962)
+                        _1962 = "onmouseover =\"_218('" + _1962 + "');\"";
+                    if (!_5344(_754, "_1350"))
+                    {
+                        _5367 += "<rect id='_7636" + _5341 + "' style='fill:rgb(255 180 0 /0.23); stroke-width:0;' />\r\n";
+                        _5367 += "<text id='_7637" + _5341 + "' text-anchor='start' dominant-baseline='middle' x='" + _5362 + "' y='" + (_5368 + _5335 / 2 ) + "' style='font-size:x-large; " + _5369 + "'  " + _1962 + ">" + _5351 + "</text>\r\n";
+                        _5341++;
+                    }
+                }
+                {
+                    let _5369;
+                    let _1962;
+                    _1962 = "";
+                    if (_305._3025)
+                    {
+                        _5369 = "fill:rgb(0 0 0 / 0.3);";
+                        _1962 += L("不参与口型参数变化，只是声带开始振动");
+                    }
+                    else
+                    {
+                        _5369 = "";
+                    }
+                    if (_1962)
+                        _1962 = "onmouseover =\"_218('" + _1962 + "');\"";
+                    let _5370;
+                    _5370 = "end";
+                    if (_5344(_754, "_1351"))
+                        _5370 = "middle";
+
+                    _5367 += "<rect id='_7636" + _5341 + "' style='fill:rgb(255 180 0 /0.23); stroke-width:0;' />\r\n";
+                    _5367 += "<text id='_7637" + _5341 + "' text-anchor='" + _5370 + "' dominant-baseline='middle' x='" + _5363 + "' y='" + (_5368 + _5335 / 2) + "' style='font-size:x-large; " + _5369 + "'  " + _1962 + ">" + _5352 + "</text>\r\n";
+                    _5341++;
+                }
+            }
+            if (_5353)
+            {
+                let _5369;
+                _5369 = "";
+                _1962 = "";
+                _1962 += L("发声带音的同时发的清擦音");
+                if (_1962)
+                    _1962 = "onmouseover =\"_218('" + _1962 + "');\"";
+                _5367 += "<rect id='_7636" + _5341 + "' style='fill:rgb(255 180 0 /0.23); stroke-width:0;' />\r\n";
+                _5367 += "<text id='_7637" + _5341 + "' text-anchor='start' dominant-baseline='middle' x='" + _5362 + "' y='" + (_5368 + _5335 / 2) + "' style='font-size:normal; " + _5369 + "'  " + _1962 + ">(" + _5353 + ")</text>\r\n";
+                _5341++;
+                if (_5349 != _5350)
+                {
+                    if (_5344(_754, "_1350"))
+                        _5342.push({ _5371: _5341 - 3, _5372: _5341 - 1 });
+                    else
+                        _5342.push({ _5371: _5341 - 1, _5372: _5341 - 3 });
+                }
+            }
+            _5368 += _5335;
+
+            
+            if (_5348)
+            {
+                let _5349 = _5348._1784;
+                [_5356, _5357, _5358] = _1665._5298(_5349);
+                let _5373;
+                let _5374;
+                if (_5348 == _305)
+                {
+                    _5373 = _2090;
+                    _5374 = 0;
+                }
+                else
+                {
+                    _5373 = (_5348._3017 + _305._3017) / _305._3017;
+                    _5373 *= _2090;
+                    _5374 = _5373 - _2090;
+                }
+                function _5375(x)
+                {
+                    return _5362 + x * (_5373 - 1) - _5374;
+                }
+                function _5376(y)
+                {
+                    return _5368 + 1 + (1 - y) * (_5337 - 2);
+                }
+                {
+                    let _5377;
+                    _5377 = new Object();
+                    _5377.x = _5375(0);
+                    _5377.width = _5373;
+                    _5377.y = _5376(0);
+                    _5377.height = _5337 - 2;
+                    _5377 = DOMRectReadOnly.fromRect(_5377);
+                    _5340[_754] = _5377;
+                    if (_754 - 1 >= 0 && _5340[_754 - 1] == null)
+                        _5340[_754 - 1] = _5340[_754];
+                }
+                for (let _1774 = 0; _1774 < 2; _1774++)
+                {
+                    _5367 += '<path d="';
+                    if (_5349 == _5350)
+                    {
+                        if (_1774 == 0)
+                        {
+                            _5367 += "M ";
+                            _5367 += _5375(0) + " " + _5376(0) + " ";
+                            _5367 += "L ";
+                            _5367 += _5375(1) + " " + _5376(0) + " ";
+                        }
+                        else
+                        {
+                            _5367 += "M ";
+                            _5367 += _5375(0) + " " + _5376(1) + " ";
+                            _5367 += "L ";
+                            _5367 += _5375(1) + " " + _5376(1) + " ";
+                        }
+                    }
+                    else
+                    {
+                        function _5378(y)
+                        {
+                            if (_1774 == 1)
+                                y = 1 - y;
+                            return _5376(y);
+                        }
+                        let _5379 = new _718();
+                        _5379._727(0, 1, 0, 0, _5348._3018, _5348._3019);
+                        _5379._727(1, 0, _305._3020, _305._3021, 0, 0);
+                        let _750;
+                        _750 = _5379._749(_5375, _5378)[2];
+                        
+                        let _5380;
+                        _5380 = Math.round(_5373);
+                        if (_5380 > _750.length)
+                            _5380 = _750.length;
+                        for (let x = 0; x < _5380; x++)
+                        {
+                            if (x == 0)
+                                _5367 += "M ";
+                            else
+                                _5367 += "L ";
+                            _5367 += (_5362 + x - _5374) + " " + _750[x] + " ";
+                        }
+                    }
+                    let _5381;
+                    if (_1774 == 0)
+                        _5381 = "rgb(" + _5356 + ", " + _5357 + ", " + _5358 + ")";
+                    else
+                        _5381 = "rgb(" + _5359 + ", " + _5360 + ", " + _5361 + ")";
+                    _5367 += '" stroke="' + _5381 + '" stroke-width="1" fill="none" />\r\n';
+                }
+                
+                if (_5349 != _5350)
+                {
+                    for (let _1774 = 0; _1774 < 2; _1774++)
+                    {
+                        let _690, _539, x1, y1;
+                        if (_1774 == 0)
+                        {
+                            _690 = 0;
+                            _539 = 1;
+                            x1 = _690 + _5348._3018;
+                            y1 = _539 + _5348._3019;
+                        }
+                        else
+                        {
+                            _690 = 1;
+                            _539 = 1;
+                            x1 = _690 + _305._3020;
+                            y1 = _539 - _305._3021;
+                        }
+                        _690 = _5375(_690);
+                        _539 = _5376(_539);
+                        x1 = _5375(x1);
+                        y1 = _5376(y1);
+                        _5367 += "<line x1='" + _690 + "' y1='" + _539 + "' x2='" + x1 + "' y2='" + y1 + "' style='stroke:rgb(0 0 0 / 0.2);stroke-width:1' />\r\n";
+                        let _1736;
+                        if (_1774 == 0)
+                        {
+                            let _5382;
+                            if (_5348 == _305)
+                                _5382 = _754;
+                            else
+                                _5382 = _754 - 1;
+                            _1736 = "onmousedown = '_5483(" + _5382 + ");'";
+                        }
+                        else
+                            _1736 = "onmousedown = '_5490(" + _754 + ");'";
+                        _5367 += "<rect x='" + (x1 - 3) + "' y='" + (y1 - 3) + "' width='6' height='6' style='fill:rgb(255 0 0 / 0.1); stroke:rgb(0 0 0 / 0.3); stroke-width:1; cursor:move; ' " + _1736 + " />\r\n";
+                    }
+                }
+
+                
+                function _5383(_5384, _5385, _5386, _5387)
+                {
+                    let x;
+                    x = _5375(_5384);
+                    let _539;
+                    _539 = _5376(1);
+                    let y;
+                    y = _5376(1 - _5387);
+                    let _5388;
+                    _5388 = _5376(0);
+                    _5367 += "<line x1='" + x + "' y1='" + _539 + "' x2='" + x + "' y2='" + y + "' style='stroke:rgb(100 100 255 / 0.85);stroke-width:3' />\r\n";
+                    let _5389,_5390;
+                    if (y > _5388 - 20)
+                    {
+                        _5389 = "auto";
+                        _5390 = y-3;
+                    }
+                    else
+                    {
+                        _5389 = "hanging";
+                        _5390 = y+3;
+                    }
+                    let _1962;
+                    _1962 = L("音标“") + _5385 + L("”被音标“") + _5386 + L("”影响，形成“非音节性”。影响程度（0~1）：") + _5387 + L("。");
+                    let _5391;
+                    _5391 = "(" + _5386 + ")";
+                    _5367 += "<text text-anchor='middle' dominant-baseline='" + _5389 + "' x='" + x + "' y='" + _5390 + "' style='font-size: larger; color: blue;'  onmouseover =\"_218('" + _1962 + "');\">" + _5391 + "</text>\r\n";
+                    let _1736;
+                    if (_5384==0)
+                        _1736 = "_5495(" + _754 + ");";
+                    else
+                        _1736 = "_5497(" + _754 + ");";
+                    _5367 += "<line x1='" + (x - 10) + "' y1='" + y + "' x2='" + (x + 10) + "' y2='" + y + "' style='stroke:rgb(0 0 255 / 0.85); stroke-width:3; cursor: ns-resize;' onmousedown = '" + _1736 + "'  onmouseover =\"_218('" + _1962 + "');\" />\r\n";
+                }
+                if (_305._1785)
+                    _5383(0, _305._1784, _305._1785, _305._3014);
+                if (_305._1788)
+                    _5383(1, _305._1787, _305._1788, _305._3016);
+            }
+
+            
+
+            return _5367;
+        }
+        function _5392(_5393 = true)
+        {
+            if (_5322 == null)
+                return;
+
+            _5341 = 0;
+            _5342.length = 0;
+            _5333 = 0;
+            for (let _754 = 0; _754 < _5322.length; _754++)
+                _5333 += _5322[_754]._3017;
+
+            _355._1465(0, _5333);
+            if (!_5393)
+                _5394(0, _5333);
+
+            for (let _754 = 0; _754 < _5322.length; _754++)
+            {
+                let _305 = _5322[_754];
+                [_305._3030, _305._3032] = _5395(_754);
+                [_305._3031, _305._3033] = _5396(_754);
+            }
+
+            let _5397;
+            _5397 = (_5322.length >= 2);
+            let _5367;
+            _5367 = "";
+            _5367 += "<rect x='0' y='0' width='" + _5338 + "' height='" + _5336 + "' style='fill:rgb(255 0 0 / 0.035); stroke-width:0;'/>\r\n";
+            _5367 += "<rect x='0' y='" + _5336 + "' width='" + _5338 + "' height='" + _5335 + "' style='fill:rgb(0 255 0 / 0.035); stroke-width:0;'/>\r\n";
+            _5367 += "<rect x='0' y='" + (_5336 + _5335) + "' width='" + _5338 + "' height='" + _5337 + "' style='fill:rgb(0 0 255 / 0.035); stroke-width:0;'/>\r\n";
+            _5367 += "<line x1='1' y1='0' x2='1' y2='" + _5334 + "' style='stroke:rgb(128 128 100 / 0.4);stroke-width:3' />\r\n";
+            for (let _754 = 0; _754 < _5322.length; _754++)
+            {
+                let _305 = _5322[_754];
+                if (_305._3036)
+                {
+                    let _751, _752;
+                    _751 = _305._3030;
+                    _752 = _305._3032;
+                    _5367 += "<rect x='" + _751 + "' y='0' width='" + (_752 - _751 + 1) + "' height='" + _5334 + "' style='fill:rgb(0 0 0 / 0.05); stroke-width:0;'/>\r\n";
+                }
+            }
+            for (let _754 = 0; _754 < _5322.length; _754++)
+            {
+                let _305 = _5322[_754];
+                let x;
+                x = _305._3032 + 1;
+                let _1929, _1736;
+                if (_5397)
+                    _1736 = "onmousedown = '_5452(" + _754 + ");'";
+                else
+                    _1736 = "";
+                let _5381;
+                if (_754 != _5322.length - 1)
+                {
+                    _5381 = "rgb(128 128 0 / 0.4)";
+                    _1929 = (_5397 ? "cursor: col-resize;" : "");
+                }
+                else
+                {
+                    _5381 = "rgb(128 128 100 / 0.7)";
+                    _1736 = "";
+                    _1929 = "";
+                }
+                _5367 += "<line x1='" + x + "' y1='0' x2='" + x + "' y2='" + _5334 + "' style='stroke:" + _5381 + ";stroke-width:3;" + _1929 + "' " + _1736 + "/>\r\n";
+            }
+            if (_5339)
+            {
+                let _5398 = _5339;
+                let _751, _752;
+                _751 = _5398._3030;
+                _752 = _5398._3032;
+                let x;
+                x = _581._761(_751, _752, 0, _5398._3017, _5398._3028);
+                _5367 += "<line x1='" + x + "' y1='0' x2='" + x + "' y2='" + (_5334 + 10) + "' style='stroke:rgb(75 168 87 / 0.8);stroke-width:3;cursor: ew-resize;' onmousedown='_5476();'/>\r\n";
+                _5367 += "<text text-anchor='middle' dominant-baseline='hanging' x='" + x + "' y='" + (_5334 + 10) + "' style=''  >" + L("本音节结束位置") + "</text>\r\n";
+            }
+            for (let _754 = 0; _754 < _5322.length; _754++)
+            {
+                let _305 = _5322[_754];
+                let _5348;
+                if (_305._3026)
+                    _5348 = _5322[_754 - 1];
+                else if (_305._3025)
+                    _5348 = null;
+                else
+                    _5348 = _305;
+                _5367 += _5347(_5348, _305, _754);
+            }
+
+            _353.innerHTML = _5367;
+            for (let _5399 = 0; _5399 < _5342.length; _5399++)
+            {
+                let _5400;
+                _5400 = _5342[_5399];
+                let _5401 = _353.getElementById("_7637" + _5400._5371);
+                let _5402 = _353.getElementById("_7637" + _5400._5372);
+                let _5403 = _5402.getBBox().x;
+                let _5404 = _5401.getBBox().width + 2;
+                _5402.setAttribute("x",_5403 + _5404);
+            }
+            for (let _5405 = 0; _5405 < _5341; _5405++)
+            {
+                let _513;
+                _513 = _353.getElementById("_7636" + _5405);
+                let _1842;
+                _1842 = _353.getElementById("_7637" + _5405);
+                let _1472;
+                
+                
+                _1472 = _1842.getBBox();
+                _513.style.x = (_1472.x - 1) + "px";
+                _513.style.y = _1472.y + "px";
+                _513.style.width = (_1472.width + 2) + "px";
+                _513.style.height = _1472.height + "px";
+            }
+        }
+        function _1626(_445, _1578,_5393, _5406)
+        {
+            if (_445 == null)
+                return;
+            _5320 = _445;
+            _5321 = _1578;
+            let _1681;
+            _1681 = _445._1164;
+            _5319 = _1681[_1578];
+            let _358 = _5319._1621;
+
+            _5331 = null;
+            for (let _5407 = _1578 - 1; _5407 >= 0; _5407--)
+            {
+                _5331 = _1681[_5407];
+                if (_5331._5408())
+                {
+                    _5331 = null;
+                    continue;
+                }
+                if (_5331._5409())
+                {
+                    _5331 = null;
+                    break;
+                }
+                break;
+            }
+            _5332 = null;
+            for (let _5407 = _1578 + 1; _5407 < _1681.length; _5407++)
+            {
+                _5332 = _1681[_5407];
+                if (_5332._5408())
+                {
+                    _5332 = null;
+                    continue;
+                }
+                if (_5332._5409())
+                {
+                    _5332 = null;
+                    break;
+                }
+                break;
+            }
+
+            _335.innerText = _358._5410()+_358._1640 + _358._1688();
+            if (_358._1642!=_358._1640)
+                _336.innerText = L("（在 ") + _358._1642 + L(" 里面）");
+            else
+                _336.innerText = "";
+
+            {
+                let _3211, _3212, _3213, _3214, _3215;
+                [_3211, _3212, _3213, _3214, _3215]=_358._3273();
+                _347.innerText = _1665._1666(_3211+_3212+_3213+_3214+_3215);
+            }
+
+            
+
+            if (_358._3279 || _358._3280 || _358._3286 || _358._3281 || _358._3283 || _358._3284 || _358._3287 || _358._3288)
+            {
+                _5411(_358);
+            }
+            else
+            {
+                _345.innerText = _346.innerText = 
+                    _343.innerText = _344.innerText = 
+                    _340.innerText = _341.innerText = 
+                    _338.innerText = _339.innerText = "";
+                if (_358._1623 != _358._1640 && _358._1623 != _347.innerText)
+                    _342.innerText = _358._1623;
+                else
+                    _342.innerText = "";
+            }
+            if (!_5406)
+            {
+                let _5412;
+                _5412 = null;
+                if (_5332)
+                {
+                    let _5413;
+                    _5413 = _5332._1621;
+                    let _5414;
+                    _5414 = _5413._1773;
+                    _5412 = _5414._3062();
+                }
+
+                let _5415;
+                _5415 = null;
+                if (_5331)
+                {
+                    let _5416;
+                    _5416 = _5331._1621;
+                    let _5417;
+                    _5417 = _5416._1773;
+                    _5415 = _5417._3064();
+                }
+
+                let _1772;
+                _1772 = _358._1773;
+                _5322 = _1772._1776.concat(_1772._1777, _1772._1778);
+
+                
+                
+                let _1779;
+                _1779 = _1772._1780;
+                if (_1779._3048())
+                {
+                    _5339 = _1779;
+                    _5322.push(_5339);
+                }
+                else
+                {
+                    _5339 = null;
+                }
+
+                for (let _754 = 0; _754 < _5322.length; _754++)
+                    _5322[_754]._3036 = false;
+
+                
+                
+                {
+                    if (_1779._3022 == "过度到浊辅音前声带音" && _1779._1781)
+                    {
+                        if (_5412._3041())
+                        {
+                            _5322.push(_5412);
+                            _5412._3036 = true;
+                        }
+                    }
+                    let _5418;
+                    _5418 = _5322[0];
+                    if (_5418._3041())
+                    {
+                        if (_5415._3022 != "过度到浊辅音前声带音")
+                            console.assert(0);
+                        _5322.splice(0, 0, _5415);
+                        _5415._3036 = true;
+                    }
+                }
+
+	            
+	            
+                {
+                    if (_1779._3022 == "_7755" && _1779._1781)
+                    {
+                        _5322.push(_5412);
+                        _5412._3036 = true;
+                    }
+                    if (_5415 && _5415._3022 == "_7755")
+                    {
+                        _5322.splice(0, 0, _5415);
+                        _5415._3036 = true;
+                    }
+                }
+
+                
+                for (let _754 = 0; _754 < _5322.length; _754++)
+                {
+                    let _305 = _5322[_754];
+                    _305._3037 = _305._3036;
+                }
+            }
+
+            _5338 = window.innerWidth - 160;
+            if (_5338 < 400)
+                _5338 = 400;
+            _5334 = window.innerHeight - 230;
+            if (_5334 < 90)
+                _5334 = 90;
+            _5336 = (_5334 - _5335) * 0.5;
+            _5337 = (_5334 - _5335) - _5336;
+            _350.style.height = _5336 + "px";
+            _352.style.height = _5337 + "px";
+            _353.style.width = (_5338 + 10) + "px";
+            _353.style.height = (_5334 + 30) + "px";
+
+            if (!Object.hasOwn(_355, 'value'))
+            {
+                _355.style.width = (_5338 + 10 * 2) + "px";
+                _355.style.height = 25 + "px";
+                let _5419;
+                {
+                    let _1472;
+                    _1472 = _349.getBoundingClientRect();
+                    _5419 = _1472.width;
+                    _5419 -= 10;
+                }
+                _354.style.left = _5419 + "px";
+                _354.style.top = "-20px";
+                _1074(_355, 0, 100, _5420);
+                _355._1462(true);
+            }
+            else
+                _355._1416(_5338 + 10 * 2, 25);
+
+            _5392(_5393);
+        }
+
+    </script>
+</body>
+</html>

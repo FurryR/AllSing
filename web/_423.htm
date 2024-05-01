@@ -1,0 +1,216 @@
+<html>
+<head>
+    <script src="languages.js"></script>
+</head>
+<body onload="TranslateAll();">
+    <img src="_424.jpg" style="position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; z-index: -1;" />
+    <div style="text-align: right; width: 100%;">
+        <label id="_2" style="display: inline-block; cursor: pointer; text-align: center; position: fixed; top: 0px;"
+               onclick="if(parent) parent._1063();">
+            <img src="_301.png" title="L(返回到歌曲编辑器)" style="width:32px;height:32px;" /><br />
+            <span>L(返回)</span>
+        </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+    <div style="font-size: xx-large; text-align: center;  ">L(帮助)</div>
+    <br />
+    <div style="font-size: x-large;">L(大市唱简介)</div>
+    <div>L(大市唱是一款虚拟歌手软件。用鼠标键盘触摸屏，编辑歌曲；软件自动把编辑内容转化成歌曲。)</div>
+    <div>L(大市唱拥有全套的歌曲制作工具，其中包括半自动谱曲功能、半自动生成beat和背景音乐的功能，以及混音功能。)</div>
+    <div>L(大市唱编辑控件人性化，坚持科技以人为本，向客户屏蔽专业术语。)</div>
+    <div>L(大市唱支持对歌声的细微调节，让歌曲达到发行唱片的品质。)</div>
+    <div>L(大市唱可以灵活的配置角色嗓音的音色，不必针对不同人的嗓音音色，进行AI炼丹。)</div>
+    <div>L(大市唱合成歌曲，也不需要AI炼丹，而是模拟人类发音的物理模型。)</div>
+    <div>L(模型大体上分为：1 没有滤波的声带音，2 口腔鼻腔等共振腔体。)</div>
+    <br />
+    <div style="font-size: x-large;">L(术语)</div>
+    <div>L(单位由大到小是：歌曲 自然段 句子 节拍(词) 音节 音符。)</div>
+    <div>L(音节可以有一个或者多个音符（滑音、连音）（乐理角度），音节由音标组成（语言学角度）。)</div>
+    <br />
+    <div style="font-size: x-large; ">L(软件著作权)</div>
+    <div>L(《大市唱》作者赵磊，保留软件著作权)</div>
+    <br />
+    <div style="font-size: x-large; ">L(联系方式)</div>
+    <div>L(官方QQ群：364893661 欢迎加入，一起讨论)</div>
+    <br />
+    <div style="font-size: x-large;">L(模块)</div>
+    <div><span>L(x-sampa 与 ipa互相转化的模块来自于)</span>node-x-sampa-ipa MIT https://github.com/andrefs/node-x-sampa-ipa</div>
+    <div><span>L(国际音标来自于汉语拼音的模块来自于)</span>npm-pinyin2ipa MIT https://github.com/Connum/npm-pinyin2ipa</div>
+    <div><span>L(汉字转化成拼音模块来自于)</span> pinyin4js License MIT</div>
+    <div><span>L(句子切分成词模块来自于)</span> segmentit License MIT</div>
+    <div><span>L(汉语拼音转汉字模块来自于（只用了词典 ）)</span> kuaizi-ime-master License Apache-2.0 https://github.com/crazydan-studio/kuaizi-ime</div>
+    <div><span>L(Beat吉他来自于)</span> Emperador 12 String Gtr, Emperador Of Sound, https://www.polyphone-soundfonts.com/documents/20077-emperador/documents</div>
+    <div><span>L(Beat钢琴来自于)</span> Yamaha CFX Studio Grand V2, JT, https://www.polyphone-soundfonts.com/documents/15322-alphalux/documents</div>
+    <div><span>L(Beat鼓来自于)</span> Industrial set, E-mu Sound Central, https://www.polyphone-soundfonts.com/documents/24-sound-effects/373-industrial-set</div>
+    <br />
+    <div style="font-size: x-large;">L(特殊字符)</div>
+    <div>L(国际音标也比较粗，《大市唱》进行了细化，并引进新的字符进行表示。随着大市唱的升级，可能会进一步的细化。)</div>
+    <div>L(_b帛38_ 浊辅音[b]。)</div>
+    <div>L(_d徳44_ 浊辅音[d]。)</div>
+    <div>L(_g鎘47_ 浊辅音[g]。)</div>
+    <div>L(__phonetic_symbol_463_ __phonetic_symbol_d835_dced_ __phonetic_symbol_d835_dcf0_ 分别是浊辅音[b][d][g]前面的声带音)</div>
+    <div>L(_g湐69_ _g脦70_ _g颗71_ 粤语广东话的入声促音韵尾)</div>
+    <br />
+    <div>L(_M爱木25_ [m]的闭音节，受前面元音的影响)</div>
+    <br />
+    <div>L(__phonetic_symbol_26b_ 英语angle中l的发音)</div>
+    <br />
+    <div>L(__phonetic_symbol_57c_ 发an等鼻音n闭音节时，嘴唇还没有闭上时，音标[n]的发音)</div>
+    <div>L(__phonetic_symbol_1d70_ 发an等鼻音n闭音节时，嘴唇闭上后，音标[n]的发音)</div>
+    <br />
+    <div>L(__phonetic_symbol_d835_dcc3_ _g呢76_发nu等鼻音n开音节、音节的元音是突唇元音时，被元音影响的[n]的发音，__phonetic_symbol_d835_dcc3_距离元音远，_g呢76_距离元音近)</div>
+    <br />
+    <div>L(_p匹28_ _p琵27_ 是被后面的元音影响的[__phonetic_symbol_70_2b0_]，_p匹28_距离元音远，_p琵27_距离元音近。)</div>
+    <div>L(_P铍26_ 被[__phonetic_symbol_70_2b0_]影响的后面的元音。)</div>
+    <div>L(_t鹈31_ _t替30_ 是被后面的元音影响的[__phonetic_symbol_74_2b0_]，_t鹈31_距离元音远，_t替30_距离元音近。)</div>
+    <div>L(_t涕29_ 被[__phonetic_symbol_74_2b0_]影响的后面的元音。)</div>
+    <div>L(_k珂34_ _k錁33_ 是被后面的元音影响的[__phonetic_symbol_6b_2b0_]，_k珂34_距离元音远，_k錁33_距离元音近。)</div>
+    <div>L(_k壳32_ 被[__phonetic_symbol_6b_2b0_]影响的后面的元音。)</div>
+    <div>L(_x赫61_ _x颌62_ 是被后面的元音影响的[h]，_x赫61_距离元音远，_x颌62_距离元音近。)</div>
+    <div>L(_x喝63_ 被[h]影响的后面的元音。)</div>
+    <div>L(_x褐58_ _x盒59_ 是被后面的元音影响的[x]，_x褐58_距离元音远，_x盒59_距离元音近。)</div>
+    <div>L(_x荷60_ 被[x]影响的后面的元音。)</div>
+    <br />
+    <div>L(_b钵37_ 是被后面的元音影响的[p]。不送气的清擦音短，只用一个字符表示就行。)</div>
+    <div>L(_b波35_ _b桲36_ _b脖39_ 被[p]影响的后面的元音。_b波35_距离元音最远，_b桲36_居中，_b脖39_最近。)</div>
+    <div>L(_d德42_ 是被后面的元音影响的[t]。不送气的清擦音短，只用一个字符表示就行。)</div>
+    <div>L(_d得40_ _d嘚43_ _d锝41_ 被[t]影响的后面的元音。_d得40_距离元音最远，_d嘚43_居中，_d锝41_最近。)</div>
+    <div>L(_g各46_ 是被后面的元音影响的[k]。不送气的清擦音短，只用一个字符表示就行。)</div>
+    <div>L(_g个45_ _g鸽49_ _g塥48_ 被[k]影响的后面的元音。_g个45_距离元音最远，_g鸽49_居中，_g塥48_最近。)</div>
+    <div>L(_f爱抚54_ 是被后面的元音影响的[f]。)</div>
+    <div>L(_f艾付52_ _f艾弗53_ _f碍扶55_ 被[f]影响的后面的元音。_f艾付52_距离元音最远，_f艾弗53_居中，_f碍扶55_最近。)</div>
+    <div>L(_v尾50_ 是被后面的元音影响的[v]。)</div>
+    <br />
+    <div>L(__phonetic_symbol_1d6d_是[__phonetic_symbol_f0_]的后半段)</div>
+    <div>L(__phonetic_symbol_d835_dccf_是[z]的后半段)</div>
+    <div>L(__phonetic_symbol_21c_是[__phonetic_symbol_292_]的后半段)</div>
+    <div>L(__phonetic_symbol_240_是[__phonetic_symbol_290_]的后半段)</div>
+    <div>L(_r馹64_是[__phonetic_symbol_279_]的后半段)</div>
+    <br />
+    <div>L(_t鹈31_s _t替30_s 被后面元音影响的[__phonetic_symbol_2a6_2b0_]。_t替30_s 距离元音近。_t涕29_s 是[__phonetic_symbol_2a6_2b0_]的开始的声带音（暂不支持）。)</div>
+    <div>L(__phonetic_symbol_d835_dcc9_283_ __phonetic_symbol_d835_dc61_283_ 被后面元音影响的[__phonetic_symbol_2a7_2b0_]。__phonetic_symbol_d835_dc61_283_ 距离元音近，__phonetic_symbol_d835_dd99_283_ 是[__phonetic_symbol_2a7_2b0_]的开始的声带音。)</div>
+    <div>L(_t鹈31___phonetic_symbol_282_ _t替30___phonetic_symbol_282_ 被后面元音影响的[__phonetic_symbol_74_282_2b0_]。_t替30___phonetic_symbol_282_ 距离元音近。_t涕29___phonetic_symbol_282_ 是[__phonetic_symbol_74_282_2b0_]的开始的声带音（暂不支持）。)</div>
+    <div>L(__phonetic_symbol_d835_dcc9_255_ __phonetic_symbol_d835_dc61_255_ 是[__phonetic_symbol_2a8_2b0_]的两个辅音，__phonetic_symbol_d835_dcc9_255_先发生。__phonetic_symbol_d835_dd99_255_被[__phonetic_symbol_2a8_2b0_]影响的元音)</div>
+    <div>L(_d德42_z [__phonetic_symbol_2a6_][__phonetic_symbol_2a3_]的清擦音。_d锝41_z 是[__phonetic_symbol_2a6_][__phonetic_symbol_2a3_]的开始的声带音。)</div>
+    <div>L(__phonetic_symbol_d835_dcb9_292_ [__phonetic_symbol_2a7_][__phonetic_symbol_2a4_]的清擦音。__phonetic_symbol_d835_dc85_292_ 是[__phonetic_symbol_2a7_][__phonetic_symbol_2a4_]的开始的声带音。)</div>
+    <div>L(_d德42___phonetic_symbol_290_ [__phonetic_symbol_74_282_][__phonetic_symbol_64_290_]的清擦音。_d锝41___phonetic_symbol_290_ 是[__phonetic_symbol_74_282_][__phonetic_symbol_64_290_]的开始的声带音。)</div>
+    <div>L(__phonetic_symbol_d835_dcb9_291_ [__phonetic_symbol_2a8_][__phonetic_symbol_2a5_]的清擦音。__phonetic_symbol_d835_dc85_291_ 是[__phonetic_symbol_2a8_][__phonetic_symbol_2a5_]的开始的声带音。)</div>
+    <div>L(英语国际音标的[t__phonetic_symbol_279_]、[d__phonetic_symbol_279_]实质是[__phonetic_symbol_74_279_325_2b7_2b0_]、[__phonetic_symbol_74_279_325_2b7_]或[__phonetic_symbol_64_279_2b7_])</div>
+    <div>L(__phonetic_symbol_d835_dcc9_279_325_2b7_ __phonetic_symbol_d835_dc61_279_325_2b7_ 是[__phonetic_symbol_74_279_325_2b7_2b0_]的两个清擦音，__phonetic_symbol_d835_dcc9_279_325_2b7_在前；__phonetic_symbol_d835_dd99_279_325_2b7_是被[__phonetic_symbol_74_279_325_2b7_2b0_]影响的声带音)</div>
+    <div>L(__phonetic_symbol_d835_dcb9_279_2b7_是[__phonetic_symbol_74_279_325_2b7_][__phonetic_symbol_64_279_2b7_]的清擦音，__phonetic_symbol_d835_dc85_279_2b7_是声带音)</div>
+    <br />
+    <div>L(__phonetic_symbol_d80c_df71_是介于__phonetic_symbol_264_和o之间的音，用于汉语拼音o的结尾，也就是国际音标的⟨__phonetic_symbol_264__w打不溜2_̜⟩ 注意右下角有个c，此音的圆唇程度低于国际音标的预设值。)</div>
+    <br />
+    <div>L(_g空82_ 代表清擦音静音，_g五83_代表声带音静音，_g没84_代表气音静音)</div>
+    <br />
+    <div style="font-size: x-large;">L(还没有完成的功能)</div>
+    <div>L(摩擦音和咝音，不完整，目前只有16KHz，声带音没问题，摩擦音和咝音频率较高，不支持。比如“日”这个音，目前就没有咝音。)</div>
+    <div>L(粤语暂时不支持“入声”)</div>
+    <div>L(打节拍设置 复制 粘贴功能)</div>
+    <div>L(音色设置  复制 粘贴功能 )</div>
+    <div>L(音色设置  插入行的功能)</div>
+    <div>L(打节拍设置的打节拍试听功能。)</div>
+    <div>L(嗓音音色设置的嗓音音色试听功能。)</div>
+    <br />
+    <div style="font-size: x-large;">L(已知错误)</div>
+    <div>L(目前 ufdata 导入，只有  日语罗马字+x-sampa发音（无方括号） 汉语拼音+x-sampa发音（无方括号） 两种方式。)</div>
+    <div>L(不超前鼻化。汉语拼音an这个音，在读a的时候，已经鼻化。尤其是在比较放松的状态，超前鼻化和连读都会比较重。个人听着，是在传递一种轻蔑的信息。)</div>
+    <div>L(鼻音等响辅音音量不减少。真实的人声是减少的，为了让歌曲更容易的把信息输入到人脑，这里不减振幅。最典型的响辅音[w]和[j]，他们和[u][i]，真人发音时基本上只有音量的区别，本软件无音量区别。)</div>
+    <div>L(身高很高，声带频率也很高时咬字不清。声带基频高，在频谱图上，声带音的相邻N倍频之间的距离就很大。如果元音共振峰正好在两个N倍频之间。这个共振峰就体现不出来。影响肉耳对元音内容的识别，也就是虚拟歌姬咬字不清。这个现象在京剧中，很容易出现。美声也有，美声唱法，高音只有“啊”等容易辨认的发音。我认为，要让歌姬发高音，就必须调整身高。配置歌姬身高较矮。)</div>
+    <br />
+    <div style="font-size: x-large;">L(音色相关的法律问题)</div>
+    <div>L(首先必须在作品中注明音色来源。关于音色的法律问题，不宜把法律解释的过于严格，影响经济发展。我个人认为，这个属于有争议的问题。最坏最坏最坏的情况，也只是构成侵权，而不是恶意侵权。我赚了多少钱，赔他多少钱。一倍赔偿，只是不赚钱而已。我在作品中注明来源，不用他公证出钱，把诉讼成本降到最低。虚拟歌手中，因为音色获得的利润比例并不大。)</div>
+    <br />
+
+    <div style="font-size: x-large;">L(滤波)</div>
+    <div>L(如果是模仿音色的话，)</div>
+    <div>L(先让大市唱和被模仿的音频，咬字等信息完全相同。)</div>
+    <div>L(比方说被模仿的音频说的是“啊” 这个字，我也让大市唱说“啊”，不让大市唱说“鹅”。)</div>
+    <div>L(然后导出大市唱的音频。)</div>
+    <div>L(两个音频除了音色信息以外，咬字长度音量等完全相同。)</div>
+    <div>L(然后在其他音频软件里对比频谱图。)</div>
+    <div>L(这样就能获得滤波信息了。)</div>
+    <br />
+
+    <div style="font-size: x-large;">L(工程文件格式转化)</div>
+    <div>L(支持 UFDATA 格式的导入导出。UFDATA 和其他虚拟歌姬工程文件的转化在：)</div>
+    <div>L(https://sdercolin.github.io/utaformatix3/)</div>
+    <div>L(对于汉语，歌词请用汉语拼音。)</div>
+    <div>L(对于日语，歌词请用罗板子单独音。)</div>
+    <div>L(大市唱将根据发音方法和拼写习惯，区分语言)</div>
+    <br />
+
+    <div style="font-size: x-large;">L(大市唱简化工程文件)</div>
+    <div>L(对于歌词和发音，不同语言做出下处理：)</div>
+    <div>L(汉语：只导出汉字，导入时根据词典确定读音。)</div>
+    <div>L(粤语：和汉语完全一致。)</div>
+    <div>L(英语：导出单词的音节写法，比如dog导出dog，happy导出hap-py。导入时根据词典确定读音。)</div>
+    <div>L(日语：提倡导出日语汉字，比如歌词：“あの先生”导出: “あ の 先生0 先生1 先生2 先生3”。导入时，根据词典确定发音。)</div>
+    <div>L(也可以只导出假名：“あ の せ ん せ い”。)</div>
+    <br />
+
+    <div style="font-size: x-large;">L(桌面版目录配置)</div>
+    <div>L(默认情况下，临时数据文件夹（TemporaryFiles）和 exe 在同一目录。)</div>
+    <div>L(也可以把临时数据文件夹放到其他地方，但是要在exe的文件夹里，建立一个指向目录的快捷方式，并且快捷方式的文件名必须是TemporaryFiles.lnk（.lnk一般不显示）)</div>
+    <div>L(www文件夹里，放有网页文件，也可以用上述方法改变路径)</div>
+    <br />
+
+    <div style="font-size: x-large;">L(桌面版服务器配置)</div>
+    <div>L(架设好的服务器，只能在本机访问。)</div>
+    <div>L(服务器的http端口号是：48751)</div>
+    <div>L(服务器的WebSocket端口号是：48750)</div>
+    <div>L(暂时不能修改。)</div>
+    <div>L(需要用户自己编写asp才能让其他计算机访问。)</div>
+    <div>L(如果要架设穿透内网的服务器，还要建立一个指向asp网页的快捷方式，形如)</div>
+    <div>L(http://domain/api.aspx)</div>
+    <div>L(快捷方式命名为API.aspx.url（.url一般不显示）)</div>
+    <div>L(API.aspx，和 exe 文件在同一目录，直接上传aps空间服务器就行。)</div>
+    <div>L(上传 API_intranet_traverse.aspx （这是内网穿透版本）到ASP 空间，重命名为 API.aspx。快捷方式命名为API.aspx.url指向ASP空间。不管本机是否有公网IP。)</div>
+    <div>L(API_local_transmit.aspx 仅局限于本机使用（暂时没写完），上传到本机ASP服务器目录，重命名为 API.aspx。快捷方式API.aspx.url 干掉。适合本机有公网IP的情况。)</div>
+    <br />
+
+    <div style="font-size: x-large;">L(API接口)</div>
+    <div>L(输入工程文件，输出wav。在转换过程中，输出转换进度)</div>
+    <br />
+
+    <div style="font-size: x-large;">L(提倡配置音色参数，不提倡提取声带振动)</div>
+    <div>L(建议手工配置音色信息。)</div>
+    <div>L(因为肉发音，尤其是歌唱艺术家，他们的声带振动方式，会在一个音节内不断地变化（尤其是经过长期训练的），持续不变的时间太短，无法提取。)</div>
+    <div>L(必须是音色的各个参数，持续不变，1秒钟以上，才能提取声带的振动（频谱精细度和时间长度有关，和采样频率无关）。)</div>
+    <div>L(实际还原的时候，也是提取多个声带振动，一个音节内的不同的时间，切换到不同的声带振动。)</div>
+    <div>L(一个音节内，声带振动方式有变化的情况，很难一步到位提取。)</div>
+    <br />
+
+    <div style="font-size: x-large;">L(工程文件深度学习AI)</div>
+    <div>L(用工程文件，作为学习资料；深度学习AI，实现自动谱曲。)</div>
+    <div>L(这个想法，我已经写在这里了，不要去注册专利了。)</div>
+    <br />
+
+    <div style="color: red; font-size: x-large;">L(警告：不得使用大市唱注音的方法！)</div>
+    <div style="color:red;">L(《大市唱》的注音方法是国际音标的扩展，扩展方式并非有限种；)</div>
+    <div style="color:red;">L(因为客户操作的需要，必须暴露给公众。)</div>
+    <div style="color:red;">L(《大市唱》的注音方法是赵磊独自享有的知识产权。其他人不能抄袭一部分或者全部，)</div>
+    <div style="color:red;">L(或者以此为基础，做少量修改，规避法律责任。)</div>
+    <div style="color:red;">L(否则赵磊将和他诉讼到底。)</div>
+    <br />
+    <div style="color: red; font-size: x-large;">L(警告：不得使用《大市唱》合成结果作为AI学习的资料！)</div>
+    <div style="color:red;">L(《大市唱》的合成结果，包含赵磊辛苦数年提取的共振峰曲线、时域包络等发音参数。)</div>
+    <div style="color:red;">L(客户不能把《大市唱》的合成结果，输入给（深度）学习AI。)</div>
+    <div style="color:red;">L(否则赵磊将和他诉讼到底。)</div>
+    <br />
+    <div style="color: red; font-size: x-large;">L(警告：攫取音色必须注明是模拟的音色，不能以被攫取人的名义发行作品！)</div>
+    <div style="color:red;">L(《大市唱》的攫取音色的功能，孤立的片面的仅仅取声带的振动方式。)</div>
+    <div style="color:red;">L(清擦音、吐字、音调频率的细微变化方式，音量的细微变化方式等信息都不涉及。)</div>
+    <div style="color:red;">L(单纯的取音色也就是声带振动的信息，《大市唱》认为不涉及人格权、声音权、著作权。)</div>
+    <div style="color:red;">L(如果加上被攫取人的名义，我认为立即构成侵权，但是大市唱免责。)</div>
+    <div style="color:red;">L(其他虚拟歌手，只要学习材料的时长超过1秒钟，)</div>
+    <div style="color:red;">L(不管是不是叫做音色攫取，我认为都是声音攫取，肯定构成人格权侵权。)</div>
+    <br />
+    <div style="color: red; font-size: x-large;">L(警告：不得使用大市唱谱曲的方法！)</div>
+    <div style="color:red;">L(《大市唱》谱曲的方法，是赵磊用了大量的时间，分析大量的流行歌曲总结出来的谱曲方法。)</div>
+    <div style="color:red;">L(《大市唱》谱曲的方法，是谱曲软件的需求分析，虽然需求分析不受法律保护；)</div>
+    <div style="color:red;">L(但是，出现在《大市唱》的谱曲界面的，文字记载的谱曲方法，也是关于谱曲的文字著作。)</div>
+    <div style="color:red;">L(赵磊是唯一作者，享有全部的著作权。)</div>
+    <br />
+</body>
+</html>
+

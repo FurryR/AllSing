@@ -1,0 +1,383 @@
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<html>
+<head>
+    <script src="/_199.js"></script>
+    <script src="/languages.js"></script>
+    <script src="/_218.js"></script>
+    <script src="/_9/_10.js"></script>
+    <script src="/_18.js"></script>
+    <script src="/_19.js"></script>
+    <script src="/_206.js"></script>
+    <script src="_476.js"></script>
+    <script src="_477.js"></script>
+    <script src="_492.js"></script>
+    <script src="_491.js"></script>
+    <script>
+        var _7298 = null;
+        function _7001(_477)
+        {
+            _7298 = _477;
+            _480._837(1);
+            _480._822(_480.value);
+            _481._837(1);
+            _481._822(_481.value);
+            _482._837(0.6);
+            if (_477._7299.length)
+            {
+                _355._1465(0, _477._7299.length - 1);
+                _355._837(0, _477._7299.length - 1);
+            }
+            else
+            {
+                _355._1465(0, 100);
+                _355._837(0, 100);
+            }
+            _485._837(0, _7300 / 4);
+            _7069();
+            _7301(true);
+        }
+    </script>
+</head>
+<body onload="TranslateAll();" onresize="_7302();" onkeyup="if (event.key == 'Escape') {  _2.dispatchEvent( new _5317('click', {'view': window, 'bubbles': true, 'cancelable': true}));}">
+    <img src="_493.jpg" style="position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; z-index: -1;" />
+
+    <div style="text-align: right; width: 100%;">
+
+        <span style="font-size:xx-large;position:relative; top:-10px;width:100%;">L(提取声带振动)</span>&nbsp;&nbsp;
+        <span style="display:inline-block;font-size:smaller;color:darkred;width:140px;text-align:left;">
+            <span style="color: red;">L(重要：)</span>
+            <span>L(尽量保持所有的发音参数（频率，音量，咬字）都不变，时间最好有1秒钟。)</span>
+        </span>&nbsp;&nbsp;&nbsp;&nbsp;
+        <span style="display:inline-block;font-size:smaller;color:darkred;width:140px;text-align:left;">L(仅仅提取声带振动，有的音频是人工滤波的，不提取滤波信息。)</span>&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <input type="file" id="_478" multiple accept="audio/*" onchange="_7303();" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(1px 1px 1px 1px);">
+        <label id="_479" for="_478" style="display: inline-block; cursor: pointer; text-align: center;position:relative;">
+            <img src="_467.png" title="L(导入本地音频文件)" style="width:32px;height:32px;" /><br />
+            <span>L(导入音频)</span>
+        </label>&nbsp;&nbsp;
+
+        
+
+        <span style="display:inline-block;text-align: center;">
+            <span id="_480" style="display: inline-block; width: 120px; height: 20px; text-align: left;"></span><br />
+            <script>
+                _1074(_480, 0, 1, function (value) { _487.style._7304 = value; });
+                _480._1077(true);
+                _480._837(1);
+            </script>
+            <span style="">L(波形透明)</span>
+        </span>&nbsp;&nbsp;
+
+        <span style="display: inline-block; text-align: center;">
+            <span id="_481" style="display: inline-block; width: 120px; height: 20px; text-align: left;"></span><br />
+            <script>
+                _1074(_481, 0, 1, function (value) { _486.style._7304 = value; });
+                _481._1077(true);
+                _481._837(1);
+            </script>
+            <span>L(频谱透明)</span>
+        </span>&nbsp;&nbsp;
+
+        <span style="display: inline-block; text-align: center;">
+            <span id="_482" style="display: inline-block; width: 150px; height: 20px; text-align: left;"></span><br />
+            <script>
+                _1074(_482, 0, 1, function (value, _739) { if (_739) _7069(); });
+                _482._1077(true);
+                _482._837(0.6);
+            </script>
+            <span>L(频谱音量)</span>
+        </span>&nbsp;&nbsp;
+
+        <span id="_483" title="L(拖动到编辑器，添加n倍频)" style="display: inline-block; cursor: pointer; text-align: center;" onmousedown="_1082();">
+            <img src="_468.png" style="width:32px;height:32px;" /><br />
+            <span>L(N倍频)</span>
+        </span>&nbsp;&nbsp;
+
+        <span id="_484" style="text-align: center; display:none;">
+            <img src="/_379.png" style="width:32px;height:32px;vertical-align:bottom;"><br />
+            <span>L(回收站)</span>
+        </span>&nbsp;&nbsp;
+
+
+        <label id="_2" style="display: inline-block; cursor: pointer; text-align: center;" onclick="if(parent) parent._7305();">
+            <img src="/_301.png" title="L(返回到音色设置)" style="width:32px;height:32px;" /><br />
+            <span>L(返回)</span>
+        </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+    <span id="_355" style="display: inline-block; position: absolute;left:-5px;"></span>
+    <span id="_485" style="display: inline-block; position: absolute;"></span>
+    <canvas id="_486" style="position: absolute; width: 256px; height: 256px; background-color: rgb(255 20 89 / 0.01); transform-origin: top left; "></canvas>
+    <svg id="_487" style="position: absolute; width: 805px; height: 605px; background-color: rgb(100 200 89 / 0.01); " xmlns="http://www.w3.org/2000/svg" version="1.1" onmousemove=""></svg>
+    <svg id="_488" style="position: absolute; width: 805px; height: 605px; background-color: rgb(100 100 200 / 0.01); " xmlns="http://www.w3.org/2000/svg" version="1.1" onmousemove=""></svg>
+    <div id="_489" style="position:absolute;"></div>
+
+    <select id="_490" style="position: absolute; display:none;" onchange="_7306();" onblur="this.setAttribute('size', 0); this.style.display = 'none';">
+        <option value="-1">L(还没有指定)</option>
+    </select>
+    <script>
+        for (let _7091 = 1; _7091 < _7307._7308; _7091++)
+        {
+            let _1108 = new Option(_7091 + L("倍频"), _7091);
+            _490.options.add(_1108);
+        }
+    </script>
+
+    <script>
+        function _7302()
+        {
+            let width, height;
+            width = document.body.clientWidth;
+            height = document.body.clientHeight;
+            if (width < 400)
+                width = 400;
+            if (height < 400)
+                height = 400;
+
+            let _2475;
+            _2475 = width - 25
+            let _2480;
+            _2480 = height - 86 - 80;
+
+            if (!Object.hasOwn(_355, 'value'))
+            {
+                _355.style.width = (_2475 + 10) + "px";
+                _355.style.height = 25 + "px";
+                _1074(_355, 0, 100, _5420);
+                _355._1462(true);
+                _355._1465(0, 100);
+                _355._837(0, 100);
+            }
+            else
+                _355._1416(_2475 + 10, 25);
+
+            if (!Object.hasOwn(_485, 'value'))
+            {
+                _485.style.top = "81px";;
+                _485.style.left = _2475 + "px";
+                _1074(_485, _7300 / 2, 0, _7309);
+                _485._1462(true);
+                _485._1080(true);
+                _485._1416(25, _2480 + 10);
+                _485._837(0, _7300 / 4);
+                _7301(false);
+            }
+            else
+            {
+                _485.style.left = _2475 + "px";
+                _485._1416(25, _2480 + 10);
+            }
+
+            _488.style.left = _487.style.left = _486.style.left = "0px";
+            _488.style.top = _487.style.top = _486.style.top = "86px";
+            _488.style.width = _487.style.width = _486.style.width = _2475 + "px";
+            _488.style.height = _487.style.height = _486.style.height = _2480 + "px";
+            _489.style.top = (height - 80) + "px";
+            _7069();
+        }
+        function _7303()
+        {
+            let files;
+            files = _478.files;
+            let length;
+            length = files.length;
+            if (length < 1)
+                return;
+            let _6532;
+            _6532 = files[0];
+            let _800;
+            _800 = _6532.name;
+            
+            let _682;
+            _682 = new FileReader();
+            _682.onload = function (buffer)
+            {
+                _687(_800, buffer.target.result, _7310, _7311);
+                
+                
+                
+            };
+            _682.readAsArrayBuffer(_6532);
+            _478.value = "";
+        }
+        function _7310(_7312, _6854)
+        {
+            _7298._7299 = Array.from(_7312);
+            _7298._7313 = _6854;
+            _7298._7314.length = 0;
+            _355._1465(0, _7312.length - 1);
+            _355._837(0, _7312.length - 1);
+            _7069();
+            _7301(true);
+        }
+        function _7311(_904)
+        {
+            alert(L("打开音频失败：") + _904);
+        }
+        function _5420(value, _1457, _739, _1460)
+        {
+            let _7315;
+            _7315 = parseInt(_487.style.width);
+            let _5441;
+            _5441 = _7315 / 30;
+            if (_5441 < 20)
+                _5441 = 20;
+            let _5442;
+            _5442 = _1457 - value;
+            if (_5442 < _5441)
+            {
+                if (_1460 == _355._1417)
+                {
+                    value = _1457 - _5441;
+                }
+                else if (_1460 == _355._1418)
+                {
+                    value -= (_5441 - _5442) / 2;
+                    _1457 += (_5441 - _5442) / 2;
+                }
+                else 
+                {
+                    _1457 = value + _5441;
+                }
+                _355._837(value, _1457);
+            }
+            _7069(_739);
+        }
+        function _7309(value, _1457, _739, _1460)
+        {
+            let _7316;
+            _7316 = 50;
+            let _7317;
+            _7317 = _1457 - value;
+            if (_7317 < _7316)
+            {
+                if (_1460 == _485._1419)
+                {
+                    value = _1457 - _7316;
+                }
+                else if (_1460 == _485._1418)
+                {
+                    value -= (_7316 - _7317) / 2;
+                    _1457 += (_7316 - _7317) / 2;
+                }
+                else 
+                {
+                    _1457 = value + _7316;
+                }
+                _485._837(value, _1457);
+            }
+            _7069(_739);
+        }
+        function _7069(_7318 = true)
+        {
+            if (_7298 == null || _7298._7299.length == 0)
+            {
+                _489.innerHTML = _488.innerHTML = _487.innerHTML = "";
+                _7319();
+                _7301(false);
+                return;
+            }
+            let _7320, _7321;
+            _7320 = Math.round(_355.value);
+            _7321 = Math.round(_355._1457);
+            let _7322;
+            _7322 = _7321 - _7320 + 1;
+            if (_7318)
+            {
+                _7323(_7320, _7321, _7322);
+                _7324();
+            }
+
+            
+            let _7315, _7325;
+            _7315 = parseInt(_487.style.width);
+            _7325 = parseInt(_487.style.height);
+            function _7326(y)
+            {
+                return 2 + (_7325 - 4) * ((-y + 1) / 2);
+            }
+            
+            let _824;
+            _824 = "";
+            let _7327;
+            _7327 = true;
+            let _7328, _7329;
+            function _7330(x, y)
+            {
+                
+                if (isNaN(y))
+                {
+                    let _545;
+                }
+                
+                if (_7327)
+                    _7327 = false;
+                else
+                    _824 += "<line x1='" + _7328 + "' y1='" + _7329 + "' x2='" + x + "' y2='" + y + "' style='stroke:rgb(0 25 100 / 0.5);stroke-width:1' />\r\n";
+                _7328 = x;
+                _7329 = y;
+            }
+            function _7331(_7332)
+            {
+                let y;
+                y = _7298._7299[_7332];
+                y = _7326(y);
+                return y;
+            }
+            if (_7322 < _7315)
+            {
+                let _7333;
+                if (_7322 * 3.5 < _7315)
+                    _7333 = true;
+                for (let _2200 = _7320; _2200 <= _7321; _2200++)
+                {
+                    let x;
+                    x = Math.round(_581._761(0, _7315, _7320, _7321, _2200));
+                    let y;
+                    y = _7331(_2200);
+                    _7330(x, y);
+                    if (_7333)
+                        _824 += "<circle cx='" + x + "' cy='" + y + "' r='1' style='fill:rgb(0 0 0); stroke:rgb(0 0 0); stroke-width:1; ' />\r\n";
+                }
+            }
+            else
+            {
+                for (let x = 0; x < _7315; x++)
+                {
+                    let _7332;
+                    _7332 = Math.round(_581._761(_7320, _7321, 0, _7315, x));
+                    _7330(x, _7331(_7332));
+                }
+            }
+
+            {
+                let _7334;
+                _7334 = _7325 / 50;
+                let _6630, _6631;
+                _6630 = _7335(_7325 - 1);
+                _6631 = _7335(0);
+                let _7336;
+                _7336 = (_6631 - _6630) / _7334;
+                _7336 = Math.floor((_7336 + 25) / 50) * 50;
+                for (let _518 = _7336; _518 < _7298._7313 / 2; _518 += _7336)
+                {
+                    let y;
+                    y = _7337(_518);
+                    if (y < 0 || y > _7325)
+                        continue;
+                    let _5391;
+                    _5391 = "";
+                    _5391 += "-";
+                    if ((_518 % 500) == 0)
+                        _5391 += "-";
+                    if ((_518 % 1000) == 0)
+                        _5391 += "-";
+                    _5391 += _518 + "Hz";
+                    _824 += "<text text-anchor='end' dominant-baseline='middle' x='" + _7315 + "' y='" + y + "'>" + _5391 + "</text>\r\n";
+                }
+            }
+            _487.innerHTML = _824;
+        }
+    </script>
+</body>
+</html>
+

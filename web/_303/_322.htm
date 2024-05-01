@@ -1,0 +1,772 @@
+<html>
+<head>
+    <script src="/languages.js"></script>
+    <script src="/_199.js"></script>
+</head>
+<body onload="TranslateAll(); _1029();">
+    <div style="text-indent:2em;">L(英语用英语国际音标表示发音，同时还要给出每个单词的音节划分。)</div>
+    <div style="text-indent:2em;">
+        <span>L(英语音节由核心发音和附属辅音组成。核心发音类似于汉语单个字的发音，其余则为附属辅音。)</span>
+        <span>L(比如单词shop sho为核心发音，p为附属辅音；spare则s为附属辅音；bang没有附属辅音。)</span>
+        <span>L(特别地，blue、green也没有复数辅音，br bl gr gl归于核心发音。)</span>
+        <span>L(引入核心发音和辅助辅音，能有效降低英语音节的数量，方便合成。)</span>
+    </div>
+    <div style="text-indent:2em;">
+        <span>L(单词划分音节后，有可能会增加音标。)</span>
+        <span>L(比如actional，音标[n]就会出现两次[__phonetic_symbol_e6_k-__phonetic_symbol_283___phonetic_symbol_259_n-n__phonetic_symbol_259_l]，这是语音合成的需要；为了方便阅读，单词音节只有一次，ac-tion-al。)</span>
+        <span>L(singer有争议，是否复制[__phonetic_symbol_14b_]，可在这里自定义。无论是否复制，大市唱内核都支持。)</span>
+    </div>
+    <div style="text-indent:2em;">L(周知地，lable ble是一个音节（需要补__phonetic_symbol_259_）；flower只有一个音节，大市唱遵循一般规律。)</div>
+    <div style="text-indent:2em;">L(目前只支持英国英语，不支持美国英语。)</div>
+    <div style="text-indent:2em;">L(因为针对唱歌，所以暂时不支持重音和长音。)</div>
+    <div style="text-indent:2em;">L(英语复杂单词较多时，编辑器反应有点慢，可以使用其他编辑器，以后版本支持词典导入导出。)</div>
+    <div style="text-indent:2em;">
+        <span>L(暂时不支持重音。)</span>
+        <span>L(因为主要是唱歌，重音在歌曲中一般靠歌谱信息体现。)</span>
+        <span>L(对于s[p]ort，一类的词，依赖是否是重音，决定是否浊化（实际是改成不送气音），目前请把p标成b。)</span>
+    </div>
+    <div style="text-align:center;width:100%;">
+        <table id="_323" border="1" style="margin: auto; border-collapse: collapse; border-color: rgb(146, 174, 166);">
+            <tr style="cursor:default;">
+                <td>L(单词)</td>
+                <td>L(音节)</td>
+                <td>L(左<br />附属<br />辅音)</td>
+                <td>L(左<br />核心<br />辅音)</td>
+                <td>L(核心<br />元音)</td>
+                <td>L(右<br />核心<br />辅音)</td>
+                <td>L(右<br />附属<br />辅音)</td>
+                <td>L(音节<br />操作)</td>
+                <td>L(单词<br />操作)</td>
+            </tr>
+            <tr>
+                <td onclick="_3154(this,'fortunate')" rowspan="3">fortunate</td>
+                <td onclick="_3155(this,'fortunate',0)">&nbsp;for-</td>
+                <td style="font-size: x-large;" onclick="_3156(this,'fortunate',0)">&nbsp;</td>
+                <td style="font-size: x-large;" onclick="_3157(this,'fortunate',0)">f</td>
+                <td style="font-size: x-large;" onclick="_3158(this,'fortunate',0)">L(__phonetic_symbol_252_)</td>
+                <td style="font-size: x-large;" onclick="_3159(this,'fortunate',0)">&nbsp;</td>
+                <td style="font-size: x-large;" onclick="_3160(this,'fortunate',0)">&nbsp;</td>
+                <td>
+                    <img src="/_27.png" title="L(删除音节)" style="cursor: pointer; width: 12px; height: 12px;" onclick="_3161('fortunate',0)" />
+                    <img src="/_195.png" title="L(插入音节)" style="cursor: pointer; width: 12px; height: 12px;" onclick="_3162('fortunate',0)" />
+                </td>
+                <td rowspan="3">
+                    <img src="/_27.png" title="L(删除单词)" style="cursor: pointer; width: 16px; height: 16px;" onclick="_3163('fortunate')" />
+                    <img src="/_195.png" title="L(插入单词)" style="cursor: pointer; width: 16px; height: 16px;" onclick="_3164('fortunate')" />
+                </td>
+            </tr>
+            <tr>
+                <td>-tun-</td>
+                <td style="font-size: x-large;">&nbsp;</td>
+                <td style="font-size: x-large;">L(__phonetic_symbol_2a7_)</td>
+                <td style="font-size: x-large;">L(__phonetic_symbol_259_)</td>
+                <td style="font-size: x-large;">n</td>
+                <td style="font-size: x-large;">&nbsp;</td>
+                <td>
+                    <img src="/_27.png" title="L(删除音节)" style="cursor: pointer; width: 12px; height: 12px;" onclick="_3161('fortunate',0)" />
+                    <img src="/_195.png" title="L(插入音节)" style="cursor: pointer; width: 12px; height: 12px;" onclick="_3162('fortunate',0)" />
+                </td>
+            </tr>
+            <tr>
+                <td>-ate</td>
+                <td style="font-size: x-large;">&nbsp;</td>
+                <td style="font-size: x-large;">n</td>
+                <td style="font-size: x-large;">i</td>
+                <td style="font-size: x-large;">&nbsp;</td>
+                <td style="font-size: x-large;">t</td>
+                <td>
+                    <img src="/_27.png" title="L(删除音节)" style="cursor: pointer; width: 12px; height: 12px;" onclick="_3161('fortunate',0)" />
+                    <img src="/_195.png" title="L(插入音节)" style="cursor: pointer; width: 12px; height: 12px;" onclick="_3162('fortunate',0)" />
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <input id="_324" type="text" style="position: fixed; left: 530px; top: 350px; font-size: x-large;" onblur="_3165();" onkeydown="if(event.keyCode==13){this.blur();}" />
+
+    <div id="_325" style="position: fixed; left: 520px; top: 390px; border-color: rgb(146, 174, 166); border-style:outset;border-width:2px;background-color:rgb(218 219 199 / 0.8);">
+        <table border="1" style="border-collapse: collapse; border-color: rgb(146, 174, 166); text-align: center;">
+            <tr>
+                <td>
+                    <div style="font-size:x-large;">p</div>
+                    <div><b>p</b>oor</div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">t</div>
+                    <div><b>t</b>o</div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">k</div>
+                    <div><b>k</b>ey</div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">L(__phonetic_symbol_2a6_)</div>
+                    <div>i<b>ts</b></div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">L(__phonetic_symbol_2a7_)</div>
+                    <div><b>ch</b>eap</div>
+                </td>
+
+                <td>&nbsp;&nbsp;&nbsp;</td>
+
+                <td>
+                    <div style="font-size:x-large;">f</div>
+                    <div><b>f</b>at</div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">L(__phonetic_symbol_3b8_)</div>
+                    <div><b>th</b>in</div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">s</div>
+                    <div><b>s</b>o</div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">L(__phonetic_symbol_283_)</div>
+                    <div><b>sh</b>e</div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div style="font-size:x-large;">b</div>
+                    <div><b>b</b>it</div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">d</div>
+                    <div><b>d</b>o</div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">g</div>
+                    <div><b>g</b>o</div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">L(__phonetic_symbol_2a3_)</div>
+                    <div>goo<b>ds</b></div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">L(__phonetic_symbol_2a4_)</div>
+                    <div><b>j</b>eap</div>
+                </td>
+
+                <td>&nbsp;&nbsp;&nbsp;</td>
+
+                <td>
+                    <div style="font-size:x-large;">v</div>
+                    <div><b>v</b>iew</div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">L(__phonetic_symbol_f0_)</div>
+                    <div><b>th</b>en</div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">z</div>
+                    <div><b>z</b>ip</div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">L(__phonetic_symbol_292_)</div>
+                    <div>mea<b>s</b>ure</div>
+                </td>
+            </tr>
+        </table>
+        <table border="1" style="border-collapse: collapse; border-color: rgb(146, 174, 166); text-align:center; ">
+            <tr>
+                <td>
+                    <div style="font-size:x-large;">m</div>
+                    <div><b>m</b>ap</div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">n</div>
+                    <div><b>n</b>ew</div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">L(__phonetic_symbol_14b_)</div>
+                    <div>ba<b>ng</b></div>
+                </td>
+
+                <td>&nbsp;&nbsp;&nbsp;</td>
+
+                <td>
+                    <div style="font-size:x-large;">h</div>
+                    <div><b>h</b>am</div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">w</div>
+                    <div><b>w</b>e <b>wh</b>ile</div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">r</div>
+                    <div><b>r</b>un</div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">j</div>
+                    <div><b>y</b>es</div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">l</div>
+                    <div><b>l</b>eft</div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">L(__phonetic_symbol_26b_)</div>
+                    <div>cance<b>l</b></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+    <div id="_326" style="position: fixed; left: 30px; top: 390px; border-color: rgb(146, 174, 166); border-style: outset; border-width: 2px; background-color: rgb(218 219 199 / 0.8);">
+        <table border="1" style="border-collapse: collapse; border-color: rgb(146, 174, 166); text-align:center; ">
+            <tr>
+                <td>
+                    <div style="font-size:x-large;">L(__phonetic_symbol_26a_)</div>
+                    <div>b<b>i</b>t</div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">L(__phonetic_symbol_28a_)</div>
+                    <div>g<b>oo</b>d</div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">L(__phonetic_symbol_25b_)</div>
+                    <div>b<b>e</b>d</div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">L(__phonetic_symbol_28c_)</div>
+                    <div>c<b>u</b>t</div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">L(__phonetic_symbol_e6_)</div>
+                    <div>b<b>a</b>t</div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">L(__phonetic_symbol_252_)</div>
+                    <div>p<b>o</b>t</div>
+                </td>
+                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td>
+                    <div style="font-size:x-large;">L(__phonetic_symbol_259_)</div>
+                    <div>runn<b>er</b></div>
+                </td>
+            </tr>
+        </table>
+
+
+        <table border="1" style="border-collapse: collapse; border-color: rgb(146, 174, 166); text-align:center; ">
+            <tr>
+                <td>
+                    <div style="font-size:x-large;">L(iː)</div>
+                    <div>b<b>ea</b>t</div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">L(uː)</div>
+                    <div>wh<b>o</b></div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">L(__phonetic_symbol_25c_ː)</div>
+                    <div>b<b>ir</b>d</div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">L(__phonetic_symbol_254_ː)</div>
+                    <div>b<b>ou</b>ght b<b>oar</b>d</div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">L(__phonetic_symbol_251_ː)</div>
+                    <div> f<b>a</b>ther b<b>ar</b>d</div>
+                </td>
+            </tr>
+        </table>
+
+
+        <table border="1" style="border-collapse: collapse; border-color: rgb(146, 174, 166); text-align:center; ">
+            <tr>
+                <td>
+                    <div style="font-size:x-large;">L(e__phonetic_symbol_26a_)</div>
+                    <div>b<b>ay</b></div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">L(__phonetic_symbol_254___phonetic_symbol_26a_)</div>
+                    <div>b<b>oy</b></div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">L(__phonetic_symbol_259___phonetic_symbol_28a_)</div>
+                    <div>t<b>o</b>e</div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">L(a__phonetic_symbol_26a_)</div>
+                    <div>b<b>uy</b></div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">L(a__phonetic_symbol_28a_)</div>
+                    <div>c<b>ow</b></div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">L(__phonetic_symbol_26a___phonetic_symbol_259_)</div>
+                    <div>b<b>eer</b></div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">L(__phonetic_symbol_28a___phonetic_symbol_259_)</div>
+                    <div>b<b>oor</b></div>
+                </td>
+                <td>
+                    <div style="font-size:x-large;">L(__phonetic_symbol_25b___phonetic_symbol_259_)</div>
+                    <div>b<b>ear</b></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+
+    <table id="_327" border="1" style="position: fixed; left: 1030px; top: 390px; border-collapse: collapse; border-color: rgb(146, 174, 166); text-align: center; border-style: outset; border-width: 2px; background-color: rgb(218 219 199 / 0.8); ">
+        <tr>
+            <td>
+                <div style="font-size:x-large;">m</div>
+                <div>ar<b>m</b></div>
+            </td>
+            <td>
+                <div style="font-size:x-large;">n</div>
+                <div>ca<b>n</b></div>
+            </td>
+            <td>
+                <div style="font-size:x-large;">L(__phonetic_symbol_14b_)</div>
+                <div>ba<b>ng</b></div>
+            </td>
+            <td>&nbsp;&nbsp;&nbsp;</td>
+            <td>
+                <div style="font-size:x-large;">L(__phonetic_symbol_26b_)</div>
+                <div>gir<b>l</b></div>
+            </td>
+        </tr>
+
+    </table>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <script>
+        var _3166 = null;
+        var _3167 = null;
+        var _3168 = null;
+        var _3169 = "";
+        var _3170 = -1;
+        var _3171 = null;
+        var _3172 = new Array();
+        const _3173 = 0;
+        const _3174 = 1;
+        const _3175 = 0;
+        const _3176 = 1;
+        const _3177 = 2;
+        const _3178 = 3;
+        const _3179 = 4;
+        const _3180 = 5;
+
+        var _3181;
+        var _3182;
+        var _3183;
+        var _3184;
+        var _3185;
+        var _3186;
+        var _3187;
+        var _3188;
+        var _3189;
+        var _3190;
+        function _3140()
+        {
+            
+            let _3191;
+            _3191 = false;
+            for (let _3192 = 0; _3192 < _3172.length; _3192++)
+            {
+                let _3193;
+                _3193 = _3172[_3192];
+                let _1594;
+                _1594 = _3193[_3173];
+                if (!_1594)
+                {
+                    _3172.splice(_3192);
+                    _3192--;
+                    _3191 = true;
+                }
+                let _2133 = _3193[_3174];
+                for (let _1656 = 0; _1656 < _2133.length; _1656++)
+                {
+                    let _3194;
+                    _3194 = _2133[_1656];
+                    if (!_3194[_3178])
+                    {
+                        _2133.splice(_1656, 1);
+                        _1656--;
+                        _3191 = true;
+                    }
+                }
+                if (_2133.length == 0)
+                {
+                    _3172.splice(_3192);
+                    _3192--;
+                }
+            }
+            if (_3191)
+                _3195();
+            if (parent && parent.parent && parent.parent._3196)
+                parent.parent._3196(_3172);
+        }
+        function _3197(_3198)
+        {
+            _581._1324(_3172, _3198);
+            _3195();
+            _3140();
+        }
+        function _1162()
+        {
+            _3197(
+                [
+                    ["shop", [["shop", "", "ʃ", "ɒ", "", "p"]]],
+                    ["spare", [["spare", "s", "p", "eə", "", ""]]],
+                    ["blue", [["blue", "", "bl", "u", "", ""]]],
+                    ["arm", [["arm", "", "", "ɑ", "m", ""]]],
+                    ["girl", [["girl", "", "g", "ə", "ɫ", ""]]],
+                    ["flower", [["flower", "f", "l", "auə", "", ""]]],
+                    ["able", [["a", "", "", "ei", "", ""], ["ble", "", "b", "ə", "ɫ", ""]]],
+                    ["suggest", [["sug", "", "s", "ə", "", ""], ["gest", "", "ʤ", "e", "", "st"]]],
+                    ["actional", [["ac", "", "", "æ", "", "k"], ["tion", "", "ʃ", "ə", "n", ""], ["al", "", "n", "ə", "l", ""]]],
+                    ["sport", [["sport", "s", "b", "ɔː", "", "t"]]],
+                    ["spring", [["spring", "s", "br", "ɪ", "ŋ", ""]]]
+                ]
+            );
+        }
+        function _590()
+        {
+            return JSON.stringify(_3172,null,"\t");
+        }
+        function _587(_3199)
+        {
+            _3197(JSON.parse(_3199));
+        }
+        function _1029()
+        {
+            _324.style.display = "none";
+            _325.style.display = "none";
+            _326.style.display = "none";
+            _327.style.display = "none";
+
+            function _3200(_3201, _3202)
+            {
+                _3201.onclick = _3203;
+                let _3204;
+                _3204 = _3201.getElementsByTagName("td");
+                for (let _754 = 0; _754 < _3204.length; _754++)
+                {
+                    let _3205 = _3204[_754];
+                    let _3206;
+                    _3206 = _3205.getElementsByTagName("div");
+                    if (_3206.length != 2)
+                        continue;
+                    let _331;
+                    _331 = _3206[0].innerText;
+                    if (_3202.includes(_331))
+                        _3205.style.cursor = "not-allowed";
+                    else
+                        _3205.style.cursor = "pointer";
+                }
+            }
+            _3200(_325, ["ɫ"]);
+            _3200(_326, []);
+            _3200(_327, []);
+
+            _3181 = _323.getElementsByTagName("tr")[0].outerHTML;
+            let _3207;
+            _3207 = _323.getElementsByTagName("tr")[1].getElementsByTagName("td");
+            function _3208(_893)
+            {
+                _893 = _893.replaceAll("fortunate", "_7763");
+                _893 = _893.replaceAll('rowspan="3"', 'rowspan="' + '_7764' + '"');
+                _893 = _893.replaceAll(",0)", "," + "_7765" +")");
+                _893 = _893.replaceAll("&nbsp;for-", "_7766");
+                _893 = _893.replaceAll("&nbsp;", "_7766" + "</td>");
+                _893 = _893.replaceAll("f</td>", "填充字符串" + "</ td>");
+                _893 = _893.replaceAll("__phonetic_symbol_252_</td>", "填充字符串" + "</ td>");
+                return _893;
+            }
+            _3182 = _3208(_3207[0].outerHTML);
+            _3183 = _3208(_3207[1].outerHTML);
+            _3184 = _3208(_3207[2].outerHTML);
+            _3185 = _3208(_3207[3].outerHTML);
+            _3186 = _3208(_3207[4].outerHTML);
+            _3187 = _3208(_3207[5].outerHTML);
+            _3188 = _3208(_3207[6].outerHTML);
+            _3189 = _3208(_3207[7].outerHTML);
+            _3190 = _3208(_3207[8].outerHTML);
+            _3195();
+        }
+        function _3195()
+        {
+            let _824;
+            _824 = _3181 + "\r\n";
+            for (let _3192 = 0; _3192 < _3172.length; _3192++)
+            {
+                let _3193 = _3172[_3192];
+                let _3209 = _3193[_3173];
+                let _2133 = _3193[_3174];
+                for (let _1656 = 0; _1656 < _2133.length; _1656++)
+                {
+                    _824 += "<tr>\r\n";
+                    if (_1656 == 0)
+                        _824 += _3182.replaceAll("_7763", _3209).replaceAll("_7764", _2133.length) + "\r\n";
+                    let _3194 = _2133[_1656];
+                    let _3210 = _3194[_3175];
+                    if (_2133.length > 1)
+                    {
+                        if (_1656 == 0)
+                            _3210 = "&nbsp;" + _3210 + "-";
+                        else if (_1656 == _2133.length - 1)
+                            _3210 = "-" + _3210;
+                        else
+                            _3210 = "-" + _3210 + "-";
+                    }
+                    let _3211 = _3194[_3176];
+                    let _3212 = _3194[_3177];
+                    let _3213 = _3194[_3178];
+                    let _3214 = _3194[_3179];
+                    let _3215 = _3194[_3180];
+                    _824 += _3183.replaceAll("_7763", _3209).replaceAll("_7766", _3210).replaceAll("_7765", _1656) + "\r\n";
+                    _824 += _3184.replaceAll("_7763", _3209).replaceAll("_7766", _3211).replaceAll("_7765", _1656) + "\r\n";
+                    _824 += _3185.replaceAll("_7763", _3209).replaceAll("_7766", _3212).replaceAll("_7765", _1656) + "\r\n";
+                    _824 += _3186.replaceAll("_7763", _3209).replaceAll("_7766", _3213).replaceAll("_7765", _1656) + "\r\n";
+                    _824 += _3187.replaceAll("_7763", _3209).replaceAll("_7766", _3214).replaceAll("_7765", _1656) + "\r\n";
+                    _824 += _3188.replaceAll("_7763", _3209).replaceAll("_7766", _3215).replaceAll("_7765", _1656) + "\r\n";
+                    _824 += _3189.replaceAll("_7763", _3209).replaceAll("_7765", _1656) + "\r\n";
+                    if (_1656 == 0)
+                        _824 += _3190.replaceAll("_7763", _3209).replaceAll("_7764", _2133.length) + "\r\n";
+                    _824 += "</tr>\r\n";
+                }
+            }
+            _323.innerHTML = _824;
+        }
+
+
+        function _3216()
+        {
+            if (_3168.innerText != _324.value)
+            {
+                _3168.innerText = _324.value;
+                _3217();
+            }
+            _3168 = null;
+            _3166 = null
+            _3169 = "";
+            _3170 = -1;
+            _3171 = null;
+            _324.style.display = "none";
+            if (_3167)
+            {
+                _3167.style.display = "none";
+                _3167 = null;
+            }
+        }
+        function _3218()
+        {
+            if (_3166)
+            {
+                clearTimeout(_3166);
+                _3166 = null;
+            }
+        }
+        function _3165()
+        {
+            _3218();
+            _3166 = setTimeout(_3216, 200);
+        }
+
+        function _3203()
+        {
+            _3218();
+            _324.focus();
+            let _3205;
+            _3205 = event.target;
+            let _3206;
+            _3206 = _3205.getElementsByTagName("div");
+            if (_3206.length != 2)
+                _3205 = _3205.parentElement;
+            _3206 = _3205.getElementsByTagName("div");
+            if (_3206.length != 2)
+                return;
+            if (_3205.style.cursor == "not-allowed")
+                return;
+            let _3219;
+            _3219 = _3206[0].innerText;
+
+            let _2299, _753, _3220;
+            _2299 = _324.selectionStart;
+            _3220 = _324.value;
+            _753 = _3220.length;
+            _3220 = _581._1221(_3220, _2299) + _3219 + _581._1344(_3220, _753 - _2299);
+            _3220 = _3220.replaceAll(" ", "");
+            _324.value = _3220;
+            let _3221;
+            _3221 = _2299 + _3219.length;
+            _324.setSelectionRange(_3221, _3221);
+        }
+
+        function _3222(_3223, _3201, _1594, _1656)
+        {
+            _3218()
+            if (_324.style.display != "none")
+                _3216();
+
+            let _3224;
+            _3224 = _3223.getBoundingClientRect();
+            if (_3224.left == 0 && _3224.top == 0 && _3224.width == 0 && _3224.height == 0)
+                return;
+
+            _3168 = _3223;
+            _3167 = _3201;
+            _3169 = _1594;
+            _3170 = _1656;
+            _3171 = _3222.caller;
+
+            _324.value = _3223.innerText;
+            _324.style.display = "";
+            _324.style.top = _3224.top + "px";
+            _324.style.left = (_3224.left - 2) + "px";
+            _324.style.width = (_3224.width + 4) + "px";
+            _324.style.height = (_3224.height) + "px";
+            let _3225;
+            _3225 = getComputedStyle(_3223, null);
+            _324.style.fontSize = _3225.fontSize;
+            _324.focus();
+
+            if (_3201)
+            {
+                _3201.style.display = "";
+                _3201.style.top = (_3224.top + _3224.height + 2) + "px";
+                let _3226 = _3201.getBoundingClientRect().width;
+                let _3227 = document.body.clientWidth;
+                let left;
+                left = _3224.left + _3224.width / 2 - _3226 / 2;
+                if (left < 0)
+                    left = 0;
+                else if (left + _3226 > _3227)
+                    left = _3227 - _3226;
+                _3201.style.left = left + "px";
+            }
+        }
+        function _3154(_3223, _1594)
+        {
+            _3222(_3223, null, _1594, -1);
+        }
+        function _3155(_3223, _1594, _1656)
+        {
+            _3222(_3223, null, _1594, _1656);
+        }
+        function _3156(_3223, _1594, _1656)
+        {
+            _3222(_3223, _325, _1594, _1656);
+        }
+        function _3157(_3223, _1594, _1656)
+        {
+            _3222(_3223, _325, _1594, _1656);
+        }
+        function _3158(_3223, _1594, _1656)
+        {
+            _3222(_3223, _326, _1594, _1656);
+        }
+        function _3159(_3223, _1594, _1656)
+        {
+            _3222(_3223, _327, _1594, _1656);
+        }
+        function _3160(_3223, _1594, _1656)
+        {
+            _3222(_3223, _325, _1594, _1656);
+        }
+
+        function _3228(_1594)
+        {
+            for (let _754 = 0; _754 < _3172.length; _754++)
+                if (_3172[_754][_3173] == _1594)
+                    return _754;
+            return -1;
+        }
+        function _3161(_1594, _1656)
+        {
+            let _3193;
+            _3193 = _3172[_3228(_1594)];
+            let _2133;
+            _2133 = _3193[_3174];
+            if (_2133.length <= 1)
+                return;
+            _2133.splice(_1656, 1);
+            _3195();
+        }
+        function _3162(_1594, _1656)
+        {
+            let _3193;
+            _3193 = _3172[_3228(_1594)];
+            let _2133;
+            _2133 = _3193[_3174];
+            let _3229;
+            _3229 = new Array("", "", "", "", "", "");
+            _2133.splice(_1656 + 1, 0, _3229);
+            _3195();
+        }
+        function _3163(_1594)
+        {
+            let _754;
+            _754 = _3228(_1594);
+            _3172.splice(_754, 1);
+            _3195();
+        }
+        function _3164(_1594)
+        {
+            let _754;
+            _754 = _3228(_1594);
+            let _3229;
+            _3229 = new Array("", "", "", "", "", "");
+            let _3230;
+            _3230 = new Array(_3229);
+            let _3231 = new Array("", _3230);
+            _3172.splice(_754 + 1, 0, _3231);
+            _3195();
+        }
+        function _3217()
+        {
+            let _3192;
+            _3192 = _3228(_3169);
+            let _3232;
+            _3232 = _324.value;
+            switch (_3171)
+            {
+                case _3154:
+                    _3172[_3192][_3173] = _3232;
+                    break;
+                case _3155:
+                    _3172[_3192][_3174][_3170][_3175] = _3232;
+                    break;
+                case _3156:
+                    _3172[_3192][_3174][_3170][_3176] = _3232;
+                    break;
+                case _3157:
+                    _3172[_3192][_3174][_3170][_3177] = _3232;
+                    break;
+                case _3158:
+                    _3172[_3192][_3174][_3170][_3178] = _3232;
+                    break;
+                case _3159:
+                    _3172[_3192][_3174][_3170][_3179] = _3232;
+                    break;
+                case _3160:
+                    _3172[_3192][_3174][_3170][_3180] = _3232;
+                    break;
+            }
+            _3195();
+        }
+    </script>
+</body>
+</html>

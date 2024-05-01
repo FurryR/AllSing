@@ -1,0 +1,420 @@
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<html>
+<head>
+	<script src="/languages.js"></script>
+	<script src="_374.js"></script>
+	<script src="_378.js"></script>
+	<script src="_377.js"></script>
+	<script src="/_206.js"></script>
+	<script src="/_453.js"></script>
+	<script src="/_433.js"></script>
+	<script src="/_199.js"></script>
+	<script src="/_226.js"></script>
+	<script src="/_198.js"></script>
+	<script src="_380.js"></script>
+	<script src="_376.js"></script>
+	<script src="_375.js"></script>
+</head>
+<body onload="TranslateAll();">
+	<img src="_12.jpg" style="position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; z-index: -1;" />
+	<div style="text-align: right; width: 100%;">
+		<label id="_2" style="display: inline-block; cursor: pointer; text-align: center; position: fixed; top: 0px;" onclick="_6248(); if(parent) parent._1056();">
+			<img src="_301.png" title="L(返回到歌曲编辑器)" style="width:32px;height:32px;" /><br />
+			<span>L(返回)</span>
+		</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	</div>
+	<div style="font-size: xx-large; text-align: center; ">L(装饰音)</div>
+	<br />
+	<div id="_382"></div>
+	<input id="_383" type="button" value="L(新建)" onclick="_6249();" />
+	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+	<div id="_384" style="text-align: left; display: none; border-style: outset; border-width: 2px; background-color: rgb(100 255 0 / 0.05); box-sizing: border-box; padding: 20px;">
+		<span>L(名称：)</span><input id="_385" type="text" />
+		<br />
+
+		<span>L(颜色：)</span>
+		<span id="_386"></span>
+		<script>_6076(_386, 30, 15);</script>
+		<br />
+
+		<span>L(类型：)</span>
+		<select id="_387" onchange="_6250();">
+			<option value="long_duration">L(拉长音)</option>
+			<option value="echo">L(回音)</option>
+			<option value="start_sing">L(开始唱)</option>
+			<option value="climax">L(高潮)</option>
+			<option value="beat">L(打节拍)</option>
+			<option value="user_defined">L(自定义)</option>
+		</select>
+		<input id="_388" type="text" />
+		<script>
+			_387.onchange = function ()
+			{
+				if (_387.value == "user_defined")
+					_388.style.display = "";
+				else
+					_388.style.display = "none";
+			}
+		</script>
+		<br />
+
+		<span>L(对齐：)</span>
+		<input id="_389" type="radio" name="_6251" /><span>L(左对齐)</span>
+		<input id="_390" type="radio" name="_6251" /><span>L(右对齐)</span>
+		<br />
+
+		<span>L(自动：)</span>
+		<div id="_391">
+			<span id="_392"><input id="user_edit" type="radio" name="_391" skip_save /><span>L(自定义)</span></span>
+			<script>user_edit.onclick = function () { _398.style.display = ""; _405.style.display = "none"; }</script>
+			<br />
+
+			<span id="_393">
+				<input id="_394" type="radio" name="_391" skip_save /><span>L(一句话的最后一个节拍)</span>
+				<input id="echo_count_half_quarter" type="radio" name="_391" skip_save /><span>L(回声长半拍，能放下几个放几个)</span>
+				<input id="echo_count_2" type="radio" name="_391" skip_save /><span>L(重复最后两个音符)</span>
+				<input id="echo_count_3" type="radio" name="_391" skip_save /><span>L(重复最后三个音符)</span>
+				<input id="echo_count_4" type="radio" name="_391" skip_save /><span>L(重复最后四个音符)</span><br />
+				<script>function _6252() { _398.style.display = "none"; _405.style.display = ""; }</script>
+				<script>echo_count_4.onclick = echo_count_3.onclick = echo_count_2.onclick = echo_count_half_quarter.onclick = _394.onclick = _6252;</script>
+			</span>
+			<span id="_395">
+				<input id="_396" type="radio" name="_391" skip_save /><span>L(长音前的最后一个节拍)</span>
+				<input id="long_duration_count_half_quarter" type="radio" name="_391" skip_save /><span>L(插入的音符长半拍，能放下几个放几个)</span>
+				<input id="long_duration_count_2" type="radio" name="_391" skip_save /><span>L(重复刚过去的两个音符)</span>
+				<input id="long_duration_count_3" type="radio" name="_391" skip_save /><span>L(重复刚过去的三个音符)</span>
+				<input id="long_duration_count_4" type="radio" name="_391" skip_save /><span>L(重复刚过去的四个音符)</span><br />
+				<script>long_duration_count_4.onclick = long_duration_count_3.onclick = long_duration_count_2.onclick = long_duration_count_half_quarter.onclick = _396.onclick = _6252;</script>
+			</span>
+			<span id="_397">
+				<input id="musica_before_climax_auto_generate" type="radio" name="_391" skip_save /><span>L(自动生成高潮前的音乐)</span>
+				<script>musica_before_climax_auto_generate.onclick = _6252;</script>
+			</span>
+		</div>
+
+		<div id="_398">
+			<span id="_399" style="display:inline-block;"></span><br />
+			<script>
+				{
+					let _824;
+					_824 = "";
+					for (let _754 = 0; _754 < _6145._6146; _754++)
+					{
+						let _5381;
+						_5381 = new Object();
+						_6145._6148(_5381, _754);
+						_5381 = _5381._1365 + " " + _5381._1366 + " " + _5381._1367;
+                        _824 += "<span title='" + L("拖动到歌谱控制器添加音符")+"' style='cursor: pointer;' instrument_index='" + _754 + "' onmousedown='_6134._1082(this);'>\r\n";
+						_824 += "	<span style='color: rgb(" + _5381 + ");'>⨁</span>\r\n";
+                        _824 += "	<span>" + L("添加音符")+"</span>\r\n";
+						_824 += "</span>\r\n";
+                        _824 += "<span id='_6163" + _754 + "'></span>\r\n";
+                        _824 += "<input type='radio' name='" + L("编曲歌谱控制器只显示乐器")+"' onclick='_6134._6241(" + _754 + ");' />\r\n";
+                        _824 += "<span>" + L("只显示")+"</span>\r\n";
+						if ((_754 % 2) != 1)
+							_824 += "&nbsp\r\n";
+						else
+							_824 += "<br />\r\n";
+					}
+					_399.innerHTML = _824;
+					for (let _754 = 0; _754 < _6145._6146; _754++)
+					{
+						let _6163;
+                        _6163 = document.getElementById("_6163" + _754);
+						_1104(_6163, "", false, false, true);
+					}
+					_399._582 = function (_582)
+					{
+                        for (let _754 = 0; _754 < _6145._6146; _754++)
+                        {
+                            let _6163;
+							_6163 = document.getElementById("_6163" + _754);
+                            _6163._582(_582);
+                        }
+                    }
+				}
+			</script>
+			<div id="_400">
+				<input id="_401" type="radio" name='_6253' onclick="_6134._6241(-1);" />
+				<span>L(显示全部)</span>
+				<br />
+			</div>
+			<span>L(时间轴缩放)</span>
+			<span id="_100"></span>&nbsp;&nbsp;
+			<script>_1074(_100, 10, 36, function (value) { _1075._1076 = Math.round(value); _6134._6164(); }, 100, 16); _100._1077(true);</script>
+			<span>L(音量)</span><span id="_402"></span>
+			<script>_1074(_402, 0, 1, null, 100, 16); _402._837(1); _402._1077(true);</script>
+			<span id="_403" style="visibility:hidden;"><img src="_379.png" style="width:32px;height:32px;vertical-align:bottom;"><span>L(回收站)</span></span>
+			<br />
+			<nobr>
+				<svg id="_101" style="width:1000px; height: 40px;  background-color:rgb(0 0 0 / 0.1); vertical-align:bottom;" xmlns="http://www.w3.org/2000/svg" version="1.1"></svg>
+				<span style="background-color: rgb(0 0 0 / 0.1); display:inline-block; position:relative;left:-5px;">
+					&nbsp;&nbsp;&nbsp;  <span>L(长线=♩)</span>    &nbsp;  <br />
+					&nbsp;&nbsp;&nbsp;  <span>L(长线=1/4 四分音符)</span>   &nbsp;
+				</span>
+			</nobr>
+			<br />
+			<span style="white-space:nowrap;">
+				<svg id="_404" style="width:1000px; height: 393px;  background-color:rgb(0 0 255 / 0.03); vertical-align:bottom;" xmlns="http://www.w3.org/2000/svg" version="1.1"></svg>
+				<span id="_103"></span>
+				<script>_1078._1079();</script>
+			</span>
+		</div>
+		<span id="_405"></span>
+		<script>_1104(_405, L("选择乐器"), true, false, true);</script>
+		<br />
+		<nobr style="text-align:right;width:100%;display:inline-block;">
+			<span id="_406" style="display: inline-block; cursor: pointer;  text-align: center;" onclick="_6248();_6134._6108();">
+				<img src="/_416.png" title="L(音色试听)" style="width: 32px; height: 32px; " /><br />
+				<span>L(试听)</span>
+			</span>
+			<span id="_407" style="display: inline-block; cursor: pointer;  text-align: center;" onclick="_6134._6235();">
+				<img src="/_25.png" title="L(拷贝音色)" style="width: 32px; height: 32px; " /><br />
+				<span>L(拷贝)</span>
+			</span>
+			<span id="_408" style="display: inline-block; cursor: pointer;  text-align: center;" onclick="_6134._6238();">
+				<img src="/_201.png" title="L(粘贴音色)" style="width: 32px; height: 32px; " /><br />
+				<span>L(粘贴)</span>
+			</span>
+			<span id="_409" style="display: inline-block; cursor: pointer;  text-align: center;" onclick="_6254(_6134._6135);">
+				<img src="/_27.png" title="L(删除音色)" style="width: 32px; height: 32px; " /><br />
+				<span>L(删除)</span>
+			</span>
+			<span id="_410" style="display: inline-block; cursor: pointer;  text-align: center;" onclick="_6255(_6134._6135);">
+				<img src="/_195.png" title="L(插入音色)" style="width: 32px; height: 32px; " /><br />
+				<span>L(插入)</span>
+			</span>
+			<span id="_411" style="display: inline-block; cursor: pointer;  text-align: center;" onclick="_6137();">
+				<img id="_412" src="/_33.png" title="L(折起音色)" style="width: 32px; height: 32px; " /><br />
+				<span id="_413">L(折起)</span>
+			</span>
+		</nobr>
+	</div>
+
+
+	<script>
+		let _6256 = 14;
+		function _6248()
+		{
+			if (_6134._6135 == -1)
+				return;
+			let _6162;
+			_6162 = _6134._6155[_6134._6135];
+			_6162._1232 = _385.value;
+			_6162._5381 = _386.value;
+			if (_387.value != "user_defined")
+				_6162._3289 = _387.value;
+			else
+				_6162._3289 = _388.value;
+			if (_389.checked)
+				_6162._6153 = "left";
+			else
+				_6162._6153 = "right";
+			{
+				_6162._391 = "user_edit";
+				let _6160;
+				_6160 = document.body.getElementsByTagName("input");
+				for (let _570 = 0; _570 < _6160.length; _570++)
+				{
+					let _6161;
+					_6161 = _6160[_570];
+					if (_6161.type != "radio")
+						continue;
+					if (_6161.name != "_391")
+						continue;
+					if (_6161.checked)
+					{
+						_6162._391 = _6161.id;
+						break;
+					}
+				}
+			}
+            _6162._6151 = _405._6105();
+            _6162._6152 = _405._6111();
+
+			let _6150;
+			_6150 = _6162._6150;
+			for (let _754 = 0; _754 < _6145._6146; _754++)
+			{
+				let _6163;
+                _6163 = document.getElementById("_6163" + _754);
+                _6150._1291[_754] = _6163._6105();
+			}
+			_6150._984 = _402.value;
+		}
+		function _6137(_6257 = true)
+		{
+			if (_6257)
+				_6248();
+			if (_6134._6135 != -1)
+			{
+				let _6258;
+				_6258 = document.getElementById("_7647" + _6134._6135);
+				_6258.style.display = "";
+				let _6259;
+				_6259 = document.getElementById("_7648" + _6134._6135);
+				_6259.style.display = "none";
+				_6134._6135 = -1;
+			}
+			_6136();
+		}
+		document.addEventListener("mousedown", function ()
+		{
+			if (_384.style.display == "none")
+				return;
+            if (event.target == document.body || event.target == _2 || event.target == _411 || event.target == _412 || event.target == _413)
+				_6137();
+		});
+		function _6136()
+		{
+			_384.style.display = "none";
+			document.body.append(_384);
+			let _824 = "";
+			let _6155 = _6134._6155;
+			for (let _754 = 0; _754 < _6155.length; _754++)
+			{
+				_824 += "<div id='_7647" + _754 + "'>\r\n";
+                _824 += "<span onclick='_6239(" + _754 + ");' style='cursor:pointer;' title='" + L("点击编辑")+"'>\r\n";
+				_824 += _6155[_754]._6154();
+				_824 += "</span>";
+				_824 += "&nbsp&nbsp";
+				_824 += "<img src='/_416.png' onclick='_6261(" + _754 + ");' style='width:16px;height:16px;cursor:pointer;' title='" + L("试听节拍") + "' />\r\n";
+				_824 += "&nbsp";
+				_824 += "<img src='/_25.png' onclick='_1072(" + _754 + ");' style='width:16px;height:16px;cursor:pointer;' title='" + L("拷贝节拍") + "' />\r\n";
+				_824 += "&nbsp";
+				if (_754 >= _6256)
+				{
+					_824 += "<img src='/_201.png' onclick='_6238(" + _754 + ");' style='width:16px;height:16px;cursor:pointer;' title='" + L("粘贴节拍") + "' />";
+					_824 += "&nbsp";
+					_824 += "<img src='/_27.png' onclick='_6254(" + _754 + ");' style='width:16px;height:16px;cursor:pointer;' title='" + L("删除本行") + "' />";
+					_824 += "&nbsp";
+				}
+				else
+				{
+					_824 += "<img src='/_201.png'  style='width:16px;height:16px;cursor:default; -webkit-filter:grayscale(100%);' title='" + L("粘贴节拍") + "' />";
+					_824 += "&nbsp";
+					_824 += "<img src='/_27.png'  style='width:16px;height:16px;cursor:default; -webkit-filter:grayscale(100%);' title='" + L("删除本行") + "' />";
+					_824 += "&nbsp";
+				}
+				if (_754 >= _6256 - 1)
+				{
+					_824 += "<img src='/_195.png' onclick='_6255(" + _754 + ");' style='width:16px;height:16px;cursor:pointer;' title='" + L("插入新的歌谱") + "' />\r\n";
+					_824 += "</div >\r\n";
+				}
+				else
+				{
+					_824 += "<img src='/_195.png'  style='width:16px;height:16px;cursor:default; -webkit-filter:grayscale(100%);' title='" + L("插入新的歌谱") + "' />\r\n";
+					_824 += "</div >\r\n";
+				}
+				_824 += "<div id='_7648" + _754 + "' style='display:none;'></div>";
+			}
+			_382.innerHTML = _824;
+		}
+		function _6239(_620, _6257 = true)
+		{
+			_6134._6241(-1);
+			_6137(_6257);
+			_6134._6135 = _620;
+			let _6258;
+			_6258 = document.getElementById("_7647" + _620);
+			
+			let _6260;
+			_6260 = _6258.getElementsByTagName("span")[0];
+			_6260.onclick = null;
+			_6260.style.cursor = "";
+			_6260.title = "";
+            _6260.style.backgroundColor = "gainsboro";
+			let _6259;
+			_6259 = document.getElementById("_7648" + _620);
+			_6259.style.display = "";
+			_6259.append(_384);
+			_384.style.display = "inline-block";
+            _6134._612(_6134._6135 >= _6256);
+			if (_6134._6135 >= _6256)
+			{
+				_581._582(_408, true);
+				_581._582(_409, true);
+			}
+			else
+			{
+				_581._582(_408, false);
+				_581._582(_409, false);
+			}
+			if (_6134._6135 >= _6256 - 1)
+				_581._582(_410, true);
+			else
+				_581._582(_410, false);
+		}
+
+		function _6261(_754)
+		{
+			let _6262;
+			_6262 = _6134._6135;
+			if (_6262 != -1)
+				_6248();
+			_6134._6135 = _754;
+			_6134._6108();
+			_6134._6135 = _6262;
+		}
+		function _1072(_754)
+		{
+			let _6262;
+			_6262 = _6134._6135;
+			if (_6262 != -1)
+				_6248();
+			_6134._6135 = _754;
+			_6134._6235();
+			_6134._6135 = _6262;
+		}
+		function _6238(_754)
+		{
+			let _6262;
+			_6262 = _6134._6135;
+			if (_6262 != -1)
+				_6248();
+			_6134._6135 = _754;
+			_6134._6238();
+			_6134._6135 = _6262;
+			
+			
+		}
+		function _6254(_754)
+		{
+			if (_6134._6135 != -1)
+				_6248();
+			if (_6134._6135 == _754)
+				_6134._6135 = -1;
+			if (_6134._6135 > _754)
+				_6134._6135--;
+			_6134._6155.splice(_754, 1);
+			_6136();
+			if (_6134._6135 != -1)
+				_6239(_6134._6135, false)
+		}
+		function _6255(_754)
+		{
+			if (_6134._6135 != -1)
+				_6248();
+			let _6263 = new _6149();
+			_6134._6155.splice(_754 + 1, 0, _6263);
+			_6134._6135 = _754 + 1;
+			_6136();
+			_6239(_6134._6135, false);
+		}
+		function _6249()
+		{
+			if (_6134._6135 != -1)
+				_6248();
+			let _6263 = new _6149();
+			_6134._6155.push(_6263);
+			_6134._6135 = _6134._6155.length - 1;
+			_6136();
+			_6239(_6134._6135, false);
+		}
+	</script>
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,154 @@
+<html>
+<head>
+    <script src="/languages.js"></script>
+    <script src="/_199.js"></script>
+    <script src="/_196.js"></script>
+    <script>
+        function _3140()
+        {
+            let _3141 = _314.getElementsByTagName("iframe");
+            for (let _3142 = 0; _3142 < _3141.length; _3142++)
+            {
+                let _3143 = _3141[_3142];
+                if (_3143.style.display == '')
+                    if (_3143.contentWindow._3140)
+                        _3143.contentWindow._3140();
+            }
+        }
+        function _3144(_3145)
+        {
+            let _3141 = _314.getElementsByTagName("iframe");
+            for (let _3142 = 0; _3142 < _3141.length; _3142++)
+            {
+                let _3143 = _3141[_3142];
+                if (_3143 == _3145)
+                {
+                    _3143.style.display = '';
+                }
+                else
+                {
+                    if (_3143.style.display == '')
+                        if (_3143.contentWindow._3140)
+                            _3143.contentWindow._3140();
+                    _3143.style.display = 'none';
+                }
+            }
+        }
+        function _1162()
+        {
+            let _3141 = _314.getElementsByTagName("iframe");
+            for (let _3142 = 0; _3142 < _3141.length; _3142++)
+            {
+                let _3143 = _3141[_3142];
+                if (_3143.contentWindow._1162)
+                    _3143.contentWindow._1162();
+            }
+        }
+        function _3146(_3147)
+        {
+            switch (_3147)
+            {
+                case _315: return "chinese";
+                case _316: return "japanese";
+                case _317: return "english";
+                case _318: return "cantonese";
+            }
+        }
+        function _3148(_3149)
+        {
+            switch (_3149)
+            {
+                case "chinese": return _315;
+                case "japanese": return _316;
+                case "english": return _317;
+                case "cantonese": return _318;
+            }
+        }
+        function _590()
+        {
+            let _3150 = new _1209();
+            _3150._1235(true);
+            let _3141 = _314.getElementsByTagName("iframe");
+            for (let _3142 = 0; _3142 < _3141.length; _3142++)
+            {
+                let _3143 = _3141[_3142];
+                if (_3143.contentWindow._590)
+                {
+                    _3150._1252();
+                    _3150.String("_3149", _3146(_3143));
+                    _3150._1247("_913", _3143.contentWindow._590());
+                    _3150._1253();
+                }
+            }
+            return _3150._1260();
+        }
+        function _587(_893)
+        {
+            if (parent._3151)
+            {
+
+            }
+            else
+            {
+                let _1580 = new _1261();
+                _1580._1264(_893);
+                let _3152;
+                _3152 = _1580._1263().length;
+                let _3141 = _314.getElementsByTagName("iframe");
+                for (let _3153 = 0; _3153 < _3152; _3153++)
+                {
+                    if (_1580._1252(_3153) !== undefined)
+                    {
+                        let _3149 = _1580.String("_3149");
+                        let _913 = _1580._1247("_913");
+                        for (let _3142 = 0; _3142 < _3141.length; _3142++)
+                        {
+                            let _3143 = _3141[_3142];
+                            if (_3146(_3143) == _3149)
+                            {
+                                if (_3143.contentWindow._587)
+                                    _3143.contentWindow._587(_913);
+                                break;
+                            }
+                        }
+                        _1580._1253(_3153);
+                    }
+                }
+            }
+        }
+        function _1029()
+        {
+            _3148(_581._1352()).style.display = "";
+        }
+    </script>
+</head>
+<body onload="TranslateAll(); _1029();" style="overflow:hidden;">
+    <img src="_330.jpg" style="position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; z-index: -1;" />
+
+    <div id="_314" style="position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; box-sizing: border-box; border-width: 0px; border-top-width: 100px; border-style: solid; border-color: transparent; ">
+        <iframe id="_315" src="_320.htm" style="position: relative; border: none; width: 100%; height: 100%; left: 0px; top: 0px; z-index: 10000001; display:none;"></iframe>
+        <iframe id="_316" src="_319.htm" style="position: relative; border: none; width: 100%; height: 100%; left: 0px; top: 0px; z-index: 10000002; display: none;"></iframe>
+        <iframe id="_317" src="_322.htm" style="position: relative; border: none; width: 100%; height: 100%; left: 0px; top: 0px; z-index: 10000003; display: none;"></iframe>
+        <iframe id="_318" src="_321.htm" style="position: relative; border: none; width: 100%; height: 100%; left: 0px; top: 0px; z-index: 10000004; display: none;"></iframe>
+    </div>
+
+    <div style="text-align: right; width: 100%;">
+        <label id="_2" style="display: inline-block; cursor: pointer; text-align: center; position: fixed; top: 0px;" onclick="_3140(); if(parent) parent._1061();">
+            <img src="/_301.png" title="L(返回到歌曲编辑器)" style="width:32px;height:32px;" /><br />
+            <span>L(返回)</span>
+        </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+    <div style="position:fixed;top:30px;width:100%;">
+        <div style="font-size: xx-large; text-align: center;  ">L(用户词典)</div>
+        <div style="text-align:right;">
+            <span>L(语言：)</span>
+            <input type="radio" name="_1582" checked onclick="_3144(_315);" /><span>L(汉语)</span>
+            <input type="radio" name="_1582" onclick="_3144(_317);" /><span>L(英语)</span>
+            <input type="radio" name="_1582" onclick="_3144(_316);" /><span>L(日语)</span>
+            <input type="radio" name="_1582" onclick="_3144(_318);" /><span>L(粤语)</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+    </div>
+</body>
+</html>
+
